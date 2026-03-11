@@ -1,0 +1,1269 @@
+{
+  "topics": [
+    {
+      "query": "pizza",
+      "slug": "pizza",
+      "category": "Food & Cuisine",
+      "searchCount": 445,
+      "featured": true,
+      "topicData": {
+        "title": "Pizza",
+        "subtitle": "Dish · Neapolitan / Italian Cuisine",
+        "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=70",
+        "type": "Food",
+        "country": "Italy",
+        "state": "Naples",
+        "founded": "997 CE",
+        "population": "N/A",
+        "coordinates": "N/A",
+        "languages": [
+          "Italian",
+          "Latin"
+        ],
+        "summary": "The word pizza first appeared in a Latin text in Gaeta, Italy in 997 CE. The modern tomato-based pizza was developed in Naples in the 18th century after tomatoes arrived from the Americas.",
+        "aiInsight": "Pizza etymology remains debated. The tomato pizza we know is only 200-300 years old, yet flatbreads with toppings are documented in Ancient Egypt, Greece, and Persia.",
+        "nameChanges": [
+          {
+            "name": "Flatbread (Ancient)",
+            "period": "Ancient",
+            "era": "Ancient Mediterranean",
+            "language": "Greek/Latin",
+            "meaning": "Flat cake with toppings",
+            "context": "Ancient Greeks and Romans ate focaccia-like flatbreads with oil, cheese, and herbs.",
+            "color": "#7c3aed",
+            "source": "Ancient Roman and Greek texts",
+            "current": false
+          },
+          {
+            "name": "Picea / Piza",
+            "period": "997 CE",
+            "era": "Medieval Italian",
+            "language": "Latin/Lombard",
+            "meaning": "Possibly mouthful or bite",
+            "context": "First written record: a Gaeta notary document (997 CE) requiring delivery of twelve pizzas.",
+            "color": "#4f46e5",
+            "source": "Gaeta Notary Document, 997 CE",
+            "current": false
+          },
+          {
+            "name": "Pizza Napolitana",
+            "period": "1700s-1800s",
+            "era": "Modern Naples",
+            "language": "Italian",
+            "meaning": "Neapolitan pizza (with tomato)",
+            "context": "Tomatoes from Americas adopted by Neapolitan poor in 1700s. Pizza Margherita created for Queen Margherita in 1889.",
+            "color": "#d97706",
+            "source": "Pizzeria Port Alba Records, Naples",
+            "current": false
+          },
+          {
+            "name": "Pizza",
+            "period": "1900 - Present",
+            "era": "Global",
+            "language": "Italian origin",
+            "meaning": "Flat yeasted bread with toppings",
+            "context": "Italian immigrants took pizza to America. New York and Chicago styles developed.",
+            "color": "#16a34a",
+            "source": "Lombardi's Pizzeria, New York, 1905",
+            "current": true
+          }
+        ],
+        "historicalContext": [
+          {
+            "period": "Ancient Flatbreads (Pre-1000 CE)",
+            "content": "Flatbreads with toppings eaten across Mediterranean."
+          },
+          {
+            "period": "Medieval Naples (997-1700s)",
+            "content": "Street food vendors sold cheap flatbreads."
+          },
+          {
+            "period": "Tomato Revolution (1700s-1900)",
+            "content": "Tomatoes adopted by Neapolitan poor. Pizza became a cheap staple meal."
+          },
+          {
+            "period": "American Pizza (1900-Present)",
+            "content": "Italian immigrants brought pizza to New York. NY slice and deep dish Chicago styles developed."
+          }
+        ],
+        "relatedTopics": [
+          {
+            "label": "Naples",
+            "tag": "City · Campania, Italy",
+            "slug": "naples"
+          },
+          {
+            "label": "Margherita Pizza",
+            "tag": "Dish · Italian",
+            "slug": "margherita-pizza"
+          }
+        ],
+        "quickFacts": [
+          {
+            "label": "First documented",
+            "value": "997 CE, Gaeta, Italy"
+          },
+          {
+            "label": "Tomato pizza era",
+            "value": "1700s (post-Americas)"
+          },
+          {
+            "label": "Global industry",
+            "value": "140 billion dollars/year"
+          },
+          {
+            "label": "UNESCO heritage",
+            "value": "Neapolitan art of pizzaiuolo (2017)"
+          },
+          {
+            "label": "Most popular topping",
+            "value": "Mozzarella and tomato"
+          }
+        ]
+      },
+      "comments": [
+        {
+          "author": "Giovanni Russo",
+          "avatar": "GR",
+          "text": "Pizza is from Naples. Most people do not know true Neapolitan pizza history!",
+          "rating": 5,
+          "likes": 55
+        }
+      ]
+    },
+    {
+      "query": "google",
+      "slug": "google",
+      "category": "Companies & Brands",
+      "searchCount": 567,
+      "featured": true,
+      "topicData": {
+        "title": "Google",
+        "subtitle": "Company · Technology / Search Engine",
+        "image": "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=800&q=70",
+        "type": "Company",
+        "country": "USA",
+        "state": "California",
+        "founded": "1996 CE (as BackRub)",
+        "population": "N/A",
+        "coordinates": "37.4220 N, 122.0841 W",
+        "languages": [
+          "English"
+        ],
+        "summary": "Google began as a Stanford research project called BackRub in 1996. Renamed Google in 1997, the name is a play on googol (10 to the 100th power) — chosen to represent the mission to organise vast quantities of information on the web.",
+        "aiInsight": "The name Google was reportedly a misspelling of googol when Larry Page and Sergey Brin were checking domain availability. The error became one of the most valuable brand names in history.",
+        "nameChanges": [
+          {
+            "name": "BackRub",
+            "period": "1996-1997",
+            "era": "Stanford Research",
+            "language": "English",
+            "meaning": "Analyses back-links of websites",
+            "context": "Larry Page and Sergey Brin Stanford research project that ranked web pages by back-link analysis.",
+            "color": "#7c3aed",
+            "source": "Stanford Research Records, 1996",
+            "current": false
+          },
+          {
+            "name": "Google",
+            "period": "1997 - Present",
+            "era": "Tech Startup / Global",
+            "language": "English (invented)",
+            "meaning": "Play on googol (10 to the power 100)",
+            "context": "Named Google September 1997. Company incorporated 4 September 1998.",
+            "color": "#16a34a",
+            "source": "Google Domain Registration, 15 September 1997",
+            "current": true
+          }
+        ],
+        "historicalContext": [
+          {
+            "period": "Stanford Research (1995-1998)",
+            "content": "Larry Page and Sergey Brin met at Stanford. BackRub became Google. Incorporated in a Menlo Park garage."
+          },
+          {
+            "period": "Dot-Com Era and Dominance (1998-2010)",
+            "content": "Survived dot-com crash. IPO in 2004. Acquired YouTube (2006), Android (2005)."
+          },
+          {
+            "period": "Alphabet Era (2015-Present)",
+            "content": "Restructured as Alphabet. Ventures in AI (DeepMind), autonomous vehicles (Waymo)."
+          }
+        ],
+        "relatedTopics": [
+          {
+            "label": "Alphabet Inc.",
+            "tag": "Parent Company · USA",
+            "slug": "alphabet-inc"
+          },
+          {
+            "label": "YouTube",
+            "tag": "Platform · Google",
+            "slug": "youtube"
+          }
+        ],
+        "quickFacts": [
+          {
+            "label": "Original name",
+            "value": "BackRub (1996)"
+          },
+          {
+            "label": "Incorporated",
+            "value": "4 September 1998"
+          },
+          {
+            "label": "Name meaning",
+            "value": "Misspelling of googol"
+          },
+          {
+            "label": "Market cap",
+            "value": "2+ trillion dollars (2024)"
+          },
+          {
+            "label": "Daily searches",
+            "value": "8.5 billion"
+          }
+        ]
+      },
+      "comments": [
+        {
+          "author": "Dev Patel",
+          "avatar": "DP",
+          "text": "BackRub is such an awkward name. Google was clearly an upgrade!",
+          "rating": 5,
+          "likes": 78
+        }
+      ]
+    },
+    {
+      "query": "mumbai",
+      "slug": "mumbai",
+      "category": "Cities & Countries",
+      "searchCount": 390,
+      "featured": true,
+      "topicData": {
+        "title": "Mumbai",
+        "subtitle": "City · Maharashtra, India",
+        "image": "https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?w=800&q=70",
+        "type": "City",
+        "country": "India",
+        "state": "Maharashtra",
+        "founded": "1500s CE (Portuguese)",
+        "population": "20.7 million",
+        "coordinates": "19.0760 N, 72.8777 E",
+        "languages": [
+          "Marathi",
+          "Hindi",
+          "English"
+        ],
+        "summary": "Mumbai was known as Bombay during British colonial rule. The name Bombay comes from the Portuguese Bom Bahia (Good Bay). In 1995 the Maharashtra government renamed it Mumbai after the goddess Mumba Devi worshipped by the local Koli fishing community.",
+        "aiInsight": "Bombay and Mumbai were used simultaneously for years after the 1995 rename. The stock exchange is still called BSE (Bombay Stock Exchange) and has not renamed itself, showing how business identity can outlast political renames.",
+        "nameChanges": [
+          {
+            "name": "Heptanesia",
+            "period": "300 BCE",
+            "era": "Ancient",
+            "language": "Greek",
+            "meaning": "Seven islands",
+            "context": "Ancient Greek name for the seven-island archipelago that formed the base of modern Mumbai.",
+            "color": "#7c3aed",
+            "source": "Ancient Greek texts",
+            "current": false
+          },
+          {
+            "name": "Bom Bahia",
+            "period": "1534-1661",
+            "era": "Portuguese Colonial",
+            "language": "Portuguese",
+            "meaning": "Good Bay",
+            "context": "Portuguese took the islands in 1534 from the Sultanate of Gujarat. Named for the natural harbour.",
+            "color": "#4f46e5",
+            "source": "Portuguese Colonial Records, 1534",
+            "current": false
+          },
+          {
+            "name": "Bombay",
+            "period": "1661-1995",
+            "era": "British Colonial",
+            "language": "English",
+            "meaning": "Anglicisation of Bom Bahia",
+            "context": "Given to Charles II of England as part of Catherine of Braganza dowry in 1661. Leased to East India Company.",
+            "color": "#d97706",
+            "source": "Treaty of Marriage, 1661",
+            "current": false
+          },
+          {
+            "name": "Mumbai",
+            "period": "1995 - Present",
+            "era": "Post-Independence",
+            "language": "Marathi",
+            "meaning": "Mumba (goddess) + aai (mother) — Mother Mumba",
+            "context": "Maharashtra government renamed on 1 November 1995 to honour goddess Mumba Devi and assert Marathi identity.",
+            "color": "#16a34a",
+            "source": "Maharashtra Government Gazette, 1995",
+            "current": true
+          }
+        ],
+        "historicalContext": [
+          {
+            "period": "Island Archipelago (Ancient-1534)",
+            "content": "Seven islands inhabited by Koli fisherfolk. Part of various kingdoms including Silhara and Yadava dynasties."
+          },
+          {
+            "period": "Portuguese and British Era (1534-1947)",
+            "content": "Portuguese then British colonial rule. Became major trading port and capital of Bombay Presidency."
+          },
+          {
+            "period": "Post-Independence (1947-Present)",
+            "content": "Capital of Maharashtra state. Renamed Mumbai 1995. India financial capital, Bollywood home."
+          }
+        ],
+        "relatedTopics": [
+          {
+            "label": "Pune",
+            "tag": "City · Maharashtra",
+            "slug": "pune"
+          },
+          {
+            "label": "Bollywood",
+            "tag": "Film Industry · India",
+            "slug": "bollywood"
+          }
+        ],
+        "quickFacts": [
+          {
+            "label": "Area",
+            "value": "603 km squared"
+          },
+          {
+            "label": "Original name",
+            "value": "Bom Bahia (Portuguese)"
+          },
+          {
+            "label": "Renamed",
+            "value": "1 November 1995"
+          },
+          {
+            "label": "BSE still uses",
+            "value": "Bombay Stock Exchange (not renamed)"
+          },
+          {
+            "label": "Time Zone",
+            "value": "IST (UTC+5:30)"
+          }
+        ]
+      },
+      "comments": [
+        {
+          "author": "Rahul Mehta",
+          "avatar": "RM",
+          "text": "The BSE still being called Bombay Stock Exchange shows how business identity outlasts political renames.",
+          "rating": 5,
+          "likes": 31
+        }
+      ]
+    },
+    {
+      "query": "neem",
+      "slug": "neem",
+      "category": "Plants & Trees",
+      "searchCount": 145,
+      "featured": false,
+      "topicData": {
+        "title": "Neem Tree",
+        "subtitle": "Plant · Azadirachta indica · South Asia",
+        "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=70",
+        "type": "Plant",
+        "country": "India / South Asia",
+        "state": "",
+        "founded": "Cultivated 5000+ years",
+        "population": "N/A",
+        "coordinates": "N/A",
+        "languages": [
+          "Sanskrit",
+          "Hindi",
+          "Arabic",
+          "Persian"
+        ],
+        "summary": "The Neem tree has been called the village pharmacy in India. Its name derives from Persian nim and Sanskrit nimba, and was known to ancient Indians as Sarva Roga Nivarini — the cure for all ailments.",
+        "aiInsight": "Neem naming spans Sanskrit, Persian, Arabic, and modern scientific Latin, each reflecting a different culture. The scientific name Azadirachta comes from Persian azad darakht-i Hind (free tree of India).",
+        "nameChanges": [
+          {
+            "name": "Nimba",
+            "period": "Ancient",
+            "era": "Vedic India",
+            "language": "Sanskrit",
+            "meaning": "To give health",
+            "context": "Mentioned in Atharva Veda and Ayurvedic texts as medicinal and sacred.",
+            "color": "#7c3aed",
+            "source": "Atharva Veda, c.1500 BCE",
+            "current": false
+          },
+          {
+            "name": "Margosa / Indian Lilac",
+            "period": "1600-1900",
+            "era": "British Colonial",
+            "language": "English/Portuguese",
+            "meaning": "From Portuguese amargoso (bitter)",
+            "context": "British colonial botany recorded it as Margosa tree for its bitter compounds.",
+            "color": "#d97706",
+            "source": "British East India Company Botanical Records",
+            "current": false
+          },
+          {
+            "name": "Azadirachta indica",
+            "period": "1830 - Present",
+            "era": "Scientific Modern",
+            "language": "Latin (scientific)",
+            "meaning": "Noble free tree of India",
+            "context": "Formally classified by A.H.L. de Jussieu in 1830. Used globally in organic pesticides, medicine, and cosmetics.",
+            "color": "#16a34a",
+            "source": "Jussieu Botanical Classification, 1830",
+            "current": true
+          }
+        ],
+        "historicalContext": [
+          {
+            "period": "Vedic Medicine (1500 BCE-500 CE)",
+            "content": "All parts used in Ayurveda: leaves, bark, seeds, oil. Called Sarva Roga Nivarini (all-disease remover)."
+          },
+          {
+            "period": "Modern Usage (1947-Present)",
+            "content": "India fought and won against neem patent attempts in 1990s, calling it biopiracy."
+          }
+        ],
+        "relatedTopics": [
+          {
+            "label": "Ayurveda",
+            "tag": "Traditional Medicine · India",
+            "slug": "ayurveda"
+          },
+          {
+            "label": "Tulsi (Holy Basil)",
+            "tag": "Plant · India",
+            "slug": "tulsi"
+          }
+        ],
+        "quickFacts": [
+          {
+            "label": "Scientific name",
+            "value": "Azadirachta indica"
+          },
+          {
+            "label": "Family",
+            "value": "Meliaceae (mahogany family)"
+          },
+          {
+            "label": "Active compound",
+            "value": "Azadirachtin (insecticide)"
+          },
+          {
+            "label": "Lifespan",
+            "value": "150-200 years"
+          },
+          {
+            "label": "Uses",
+            "value": "Medicine, pesticide, cosmetics, dental"
+          }
+        ]
+      },
+      "comments": []
+    },
+    {
+      "query": "atom",
+      "slug": "atom",
+      "category": "Scientific Terms",
+      "searchCount": 234,
+      "featured": false,
+      "topicData": {
+        "title": "Atom",
+        "subtitle": "Scientific Term · Physics / Chemistry",
+        "image": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&q=70",
+        "type": "ScientificTerm",
+        "country": "Greece / Global",
+        "state": "",
+        "founded": "450 BCE (Democritus)",
+        "population": "N/A",
+        "coordinates": "N/A",
+        "languages": [
+          "Greek",
+          "Latin",
+          "English"
+        ],
+        "summary": "The word atom comes from the Ancient Greek atomos meaning indivisible or uncuttable. Ironically, the 20th century proved atoms are very much divisible — into protons, neutrons, electrons, and further into quarks. The name has survived despite being scientifically incorrect.",
+        "aiInsight": "The atom is one of science great naming ironies — called indivisible in Greek, it was split in 1932. We have kept the wrong name out of historical habit.",
+        "nameChanges": [
+          {
+            "name": "Atomos",
+            "period": "450 BCE",
+            "era": "Ancient Greek Philosophy",
+            "language": "Ancient Greek",
+            "meaning": "Uncuttable / indivisible",
+            "context": "Democritus and Leucippus proposed all matter consists of tiny indivisible particles called atomos.",
+            "color": "#7c3aed",
+            "source": "Democritus' Atomic Theory, c.450 BCE",
+            "current": false
+          },
+          {
+            "name": "Atom (chemical element)",
+            "period": "1808 CE",
+            "era": "Modern Chemistry",
+            "language": "English (from Greek/Latin)",
+            "meaning": "Smallest unit of a chemical element",
+            "context": "John Dalton formalised atomic theory in 1808.",
+            "color": "#d97706",
+            "source": "John Dalton, A New System of Chemical Philosophy, 1808",
+            "current": false
+          },
+          {
+            "name": "Atom (divisible)",
+            "period": "1897 - Present",
+            "era": "Quantum Physics",
+            "language": "English (retained despite misnomer)",
+            "meaning": "Nuclear particle made of protons, neutrons, electrons",
+            "context": "Electron discovered 1897, nucleus 1911, proton 1920, neutron 1932. Atoms proved divisible — name retained.",
+            "color": "#16a34a",
+            "source": "Rutherford/Bohr Atomic Models, 1911-1913",
+            "current": true
+          }
+        ],
+        "historicalContext": [
+          {
+            "period": "Greek Atomism (450-300 BCE)",
+            "content": "Democritus, Leucippus proposed atomic theory philosophically — without experimental evidence."
+          },
+          {
+            "period": "Dalton Modern Atoms (1808)",
+            "content": "Dalton used atomic theory to explain chemical reactions. Set relative atomic masses."
+          },
+          {
+            "period": "Quantum Revolution (1897-1945)",
+            "content": "Electron, proton, neutron discovered. Bohr model. Quantum mechanics developed. Nuclear fission achieved 1938."
+          }
+        ],
+        "relatedTopics": [
+          {
+            "label": "Electron",
+            "tag": "Subatomic Particle",
+            "slug": "electron"
+          },
+          {
+            "label": "Quantum Mechanics",
+            "tag": "Scientific Field",
+            "slug": "quantum-mechanics"
+          }
+        ],
+        "quickFacts": [
+          {
+            "label": "Word origin",
+            "value": "Greek a-tomos (not-cuttable)"
+          },
+          {
+            "label": "Coined by",
+            "value": "Democritus, c.450 BCE"
+          },
+          {
+            "label": "Irony",
+            "value": "Named indivisible but IS divisible"
+          },
+          {
+            "label": "Atom split",
+            "value": "1932 (Cockcroft and Walton)"
+          },
+          {
+            "label": "Size",
+            "value": "~0.1 nanometres diameter"
+          }
+        ]
+      },
+      "comments": []
+    },
+    {
+      "query": "istanbul",
+      "slug": "istanbul",
+      "category": "Cities & Countries",
+      "searchCount": 380,
+      "featured": true,
+      "topicData": {
+        "title": "Istanbul",
+        "subtitle": "City · Turkey",
+        "image": "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?w=800&q=70",
+        "type": "City",
+        "country": "Turkey",
+        "state": "",
+        "founded": "660 BCE (as Byzantium)",
+        "population": "15.8 million",
+        "coordinates": "41.0082 N, 28.9784 E",
+        "languages": [
+          "Turkish",
+          "Greek (historical)"
+        ],
+        "summary": "Istanbul is one of the most renamed cities in history, having been called Byzantium, Constantinople, and Istanbul. Capital of the Byzantine Empire then the Ottoman Empire, it was officially renamed Istanbul in 1930 by Ataturk.",
+        "aiInsight": "The name Constantinople literally means City of Constantine in Greek (Konstantinos + polis). When Ataturk renamed it Istanbul in 1930, he was actually restoring a colloquial Greek/Turkish name people were already using informally — Istanbul comes from Greek eis tin polin meaning to the city or simply in the city.",
+        "nameChanges": [
+          {
+            "name": "Byzantium",
+            "period": "660 BCE - 330 CE",
+            "era": "Ancient Greek",
+            "language": "Greek",
+            "meaning": "Named after founder Byzas of Megara",
+            "context": "Founded as Greek colony by Byzas. Strategic location at Bosphorus strait.",
+            "color": "#7c3aed",
+            "source": "Ancient Greek Colonial Records, 660 BCE",
+            "current": false
+          },
+          {
+            "name": "Constantinople",
+            "period": "330-1453 CE",
+            "era": "Byzantine Empire",
+            "language": "Greek",
+            "meaning": "City of Constantine (Konstantinos + polis)",
+            "context": "Emperor Constantine I rebuilt and renamed it as new Roman capital in 330 CE.",
+            "color": "#4f46e5",
+            "source": "Roman Imperial Decree, 330 CE",
+            "current": false
+          },
+          {
+            "name": "Kostantiniyye",
+            "period": "1453-1930",
+            "era": "Ottoman Empire",
+            "language": "Ottoman Turkish",
+            "meaning": "Ottoman form of Constantinople",
+            "context": "Mehmed II conquered in 1453. Became Ottoman capital. Turks used Kostantiniyye officially.",
+            "color": "#d97706",
+            "source": "Ottoman Imperial Records, 1453",
+            "current": false
+          },
+          {
+            "name": "Istanbul",
+            "period": "1930 - Present",
+            "era": "Republic of Turkey",
+            "language": "Turkish (from Greek)",
+            "meaning": "From Greek eis tin polin — to the city / in the city",
+            "context": "Ataturk officially renamed it Istanbul in 1930 as part of broader Turkish modernisation and nationalisation reforms.",
+            "color": "#16a34a",
+            "source": "Turkish Post Office Law, 28 March 1930",
+            "current": true
+          }
+        ],
+        "historicalContext": [
+          {
+            "period": "Ancient Byzantium (660 BCE - 330 CE)",
+            "content": "Greek colony at strategic Bosphorus crossing point between Europe and Asia."
+          },
+          {
+            "period": "Byzantine Empire (330-1453)",
+            "content": "Capital of Eastern Roman (Byzantine) Empire for 1,123 years. Centre of Orthodox Christianity."
+          },
+          {
+            "period": "Ottoman Empire (1453-1922)",
+            "content": "Capital of Ottoman Empire. Mehmed II renamed it Kostantiniyye after conquest."
+          },
+          {
+            "period": "Republic of Turkey (1923-Present)",
+            "content": "Turkey established 1923. Capital moved to Ankara. Istanbul renamed 1930 by Ataturk."
+          }
+        ],
+        "relatedTopics": [
+          {
+            "label": "Constantinople",
+            "tag": "Historical Name · Istanbul",
+            "slug": "constantinople"
+          },
+          {
+            "label": "Byzantine Empire",
+            "tag": "Historical Empire",
+            "slug": "byzantine-empire"
+          },
+          {
+            "label": "Ataturk",
+            "tag": "Historical Figure · Turkey",
+            "slug": "ataturk"
+          }
+        ],
+        "quickFacts": [
+          {
+            "label": "Area",
+            "value": "5,461 km squared"
+          },
+          {
+            "label": "Founded",
+            "value": "660 BCE as Byzantium"
+          },
+          {
+            "label": "Capital for",
+            "value": "1,600+ years (various empires)"
+          },
+          {
+            "label": "Renamed Istanbul",
+            "value": "28 March 1930"
+          },
+          {
+            "label": "Time Zone",
+            "value": "TRT (UTC+3)"
+          }
+        ]
+      },
+      "comments": [
+        {
+          "author": "Mehmet Yilmaz",
+          "avatar": "MY",
+          "text": "Istanbul being derived from a Greek phrase shows how deeply intertwined the cultures were.",
+          "rating": 5,
+          "likes": 29
+        }
+      ]
+    },
+    {
+      "query": "kolkata",
+      "slug": "kolkata",
+      "category": "Cities & Countries",
+      "searchCount": 195,
+      "featured": false,
+      "topicData": {
+        "title": "Kolkata",
+        "subtitle": "City · West Bengal, India",
+        "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=70",
+        "type": "City",
+        "country": "India",
+        "state": "West Bengal",
+        "founded": "1690 CE (Job Charnock)",
+        "population": "14.9 million",
+        "coordinates": "22.5726 N, 88.3639 E",
+        "languages": [
+          "Bengali",
+          "Hindi",
+          "English"
+        ],
+        "summary": "Kolkata was known as Calcutta during British colonial rule and served as the capital of British India from 1772 to 1911. The name Calcutta was an Anglicisation of the Bengali Kalikata. It was officially renamed Kolkata in 2001.",
+        "aiInsight": "Calcutta was the British Indian Empire capital from 1772 to 1911. Moving the capital to Delhi in 1911 was a deliberate political move by the British after the 1905 Bengal Partition protests. The Kolkata rename in 2001 restored the Bengali pronunciation that locals had always used.",
+        "nameChanges": [
+          {
+            "name": "Kalikata",
+            "period": "Pre-1690",
+            "era": "Pre-Colonial",
+            "language": "Bengali",
+            "meaning": "Possibly from Kali ghat (steps of goddess Kali) or Kilkila (flat area)",
+            "context": "Small village near the Hooghly River. Temple of Kali Ghat nearby.",
+            "color": "#7c3aed",
+            "source": "Bengal Regional Records",
+            "current": false
+          },
+          {
+            "name": "Calcutta",
+            "period": "1690-2001",
+            "era": "British Colonial",
+            "language": "English",
+            "meaning": "Anglicisation of Kalikata",
+            "context": "Job Charnock established British trading post in 1690. Became capital of British India 1772-1911.",
+            "color": "#d97706",
+            "source": "East India Company Records, 1690",
+            "current": false
+          },
+          {
+            "name": "Kolkata",
+            "period": "2001 - Present",
+            "era": "Post-Independence",
+            "language": "Bengali",
+            "meaning": "Restored Bengali pronunciation of Kalikata",
+            "context": "West Bengal government officially renamed it Kolkata on 1 January 2001.",
+            "color": "#16a34a",
+            "source": "West Bengal Government Gazette, 2001",
+            "current": true
+          }
+        ],
+        "historicalContext": [
+          {
+            "period": "British Colonial Capital (1690-1911)",
+            "content": "Capital of British India for 139 years. Centre of Bengal Renaissance, Indian independence movement."
+          },
+          {
+            "period": "Post-Independence (1947-Present)",
+            "content": "Capital of West Bengal. Intellectual and cultural capital of India. Renamed Kolkata 2001."
+          }
+        ],
+        "relatedTopics": [
+          {
+            "label": "Mumbai (was Bombay)",
+            "tag": "City · Maharashtra",
+            "slug": "mumbai"
+          },
+          {
+            "label": "West Bengal",
+            "tag": "State · India",
+            "slug": "west-bengal"
+          }
+        ],
+        "quickFacts": [
+          {
+            "label": "Area",
+            "value": "185 km squared"
+          },
+          {
+            "label": "British capital",
+            "value": "1772-1911 (139 years)"
+          },
+          {
+            "label": "Renamed",
+            "value": "1 January 2001"
+          },
+          {
+            "label": "River",
+            "value": "Hooghly (tributary of Ganges)"
+          },
+          {
+            "label": "Time Zone",
+            "value": "IST (UTC+5:30)"
+          }
+        ]
+      },
+      "comments": []
+    },
+    {
+      "query": "beijing",
+      "slug": "beijing",
+      "category": "Cities & Countries",
+      "searchCount": 310,
+      "featured": true,
+      "topicData": {
+        "title": "Beijing",
+        "subtitle": "Capital City · China",
+        "image": "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=800&q=70",
+        "type": "City",
+        "country": "China",
+        "state": "",
+        "founded": "1045 BCE (as Ji)",
+        "population": "21.5 million",
+        "coordinates": "39.9042 N, 116.4074 E",
+        "languages": [
+          "Mandarin Chinese"
+        ],
+        "summary": "Beijing has served as China national capital for most of the last 700 years under multiple dynasties and governments. Its name has changed from Ji to Yanjing to Dadu to Beiping to Beijing, reflecting each ruling power and political era.",
+        "aiInsight": "Beijing means Northern Capital in Chinese (bei = north, jing = capital). When the capital was moved south, the city was renamed Beiping (Northern Peace) to reflect it was no longer the capital. When the capital returned, it became Beijing again. Peking is the old Wade-Giles romanisation still used in Peking Duck and Peking Opera.",
+        "nameChanges": [
+          {
+            "name": "Ji",
+            "period": "1045-222 BCE",
+            "era": "Zhou Dynasty",
+            "language": "Classical Chinese",
+            "meaning": "Capital of Yan state",
+            "context": "Capital of the state of Yan during the Zhou Dynasty period.",
+            "color": "#7c3aed",
+            "source": "Zhou Dynasty Records",
+            "current": false
+          },
+          {
+            "name": "Yanjing",
+            "period": "906-1125 CE",
+            "era": "Liao Dynasty",
+            "language": "Chinese",
+            "meaning": "Capital of Yan (Yan + jing = capital)",
+            "context": "Liao dynasty capital. Name still used poetically and for a famous local beer brand.",
+            "color": "#4f46e5",
+            "source": "Liao Dynasty Records",
+            "current": false
+          },
+          {
+            "name": "Dadu",
+            "period": "1271-1368",
+            "era": "Yuan Dynasty (Kublai Khan)",
+            "language": "Mongolian",
+            "meaning": "Great capital",
+            "context": "Kublai Khan built entirely new city called Dadu (Mongolian) or Khanbaliq (Great Khan City).",
+            "color": "#059669",
+            "source": "Yuan Dynasty Records, 1271",
+            "current": false
+          },
+          {
+            "name": "Beiping",
+            "period": "1368-1421 and 1928-1949",
+            "era": "Ming Dynasty / Republic",
+            "language": "Chinese",
+            "meaning": "Northern Peace (not capital during these periods)",
+            "context": "Ming founder moved capital to Nanjing, renamed city Beiping. Returned to Beijing when Yongle moved capital north again in 1421.",
+            "color": "#0891b2",
+            "source": "Ming Dynasty Records, 1368",
+            "current": false
+          },
+          {
+            "name": "Beijing",
+            "period": "1421-1928 and 1949 - Present",
+            "era": "Ming/Qing/PRC",
+            "language": "Mandarin Chinese",
+            "meaning": "Northern Capital (bei = north, jing = capital)",
+            "context": "Current name. Capital of Ming, Qing, and now People Republic of China. Peking is old Western romanisation.",
+            "color": "#16a34a",
+            "source": "Ming Dynasty Records, 1421",
+            "current": true
+          }
+        ],
+        "historicalContext": [
+          {
+            "period": "Ancient Capital (1045 BCE-1271 CE)",
+            "content": "Capital of Yan state during Zhou Dynasty. Various kingdoms controlled the area."
+          },
+          {
+            "period": "Yuan Dynasty (1271-1368)",
+            "content": "Kublai Khan built Dadu (Khanbaliq). Marco Polo visited and described it as the greatest city in the world."
+          },
+          {
+            "period": "Ming and Qing Dynasties (1368-1912)",
+            "content": "Forbidden City built 1406-1420. Capital of imperial China for most of this period."
+          },
+          {
+            "period": "Modern China (1912-Present)",
+            "content": "Republic of China (1912). Communist victory 1949. Beijing declared capital of PRC on 1 October 1949."
+          }
+        ],
+        "relatedTopics": [
+          {
+            "label": "Peking Duck",
+            "tag": "Food · Chinese Cuisine",
+            "slug": "peking-duck"
+          },
+          {
+            "label": "Forbidden City",
+            "tag": "Heritage Site · Beijing",
+            "slug": "forbidden-city"
+          },
+          {
+            "label": "Great Wall",
+            "tag": "Heritage Site · China",
+            "slug": "great-wall"
+          }
+        ],
+        "quickFacts": [
+          {
+            "label": "Area",
+            "value": "16,411 km squared"
+          },
+          {
+            "label": "Founded",
+            "value": "1045 BCE (as Ji)"
+          },
+          {
+            "label": "Forbidden City built",
+            "value": "1406-1420 CE"
+          },
+          {
+            "label": "Name changes",
+            "value": "7 documented"
+          },
+          {
+            "label": "Time Zone",
+            "value": "CST (UTC+8)"
+          }
+        ]
+      },
+      "comments": []
+    },
+    {
+      "query": "ketchup",
+      "slug": "ketchup",
+      "category": "Food & Cuisine",
+      "searchCount": 189,
+      "featured": false,
+      "topicData": {
+        "title": "Ketchup",
+        "subtitle": "Condiment · Global",
+        "image": "https://images.unsplash.com/photo-1607748862156-7c548e7e98f4?w=800&q=70",
+        "type": "Food",
+        "country": "China / UK / USA",
+        "state": "",
+        "founded": "1690s CE (earliest record)",
+        "population": "N/A",
+        "coordinates": "N/A",
+        "languages": [
+          "Hokkien Chinese",
+          "Malay",
+          "English"
+        ],
+        "summary": "Ketchup has nothing to do with tomatoes in its origin. The word derives from the Chinese Hokkien dialect ke-tsiap, a fermented fish sauce. British sailors brought it from Southeast Asia, and it evolved through many forms before Heinz introduced tomato ketchup in 1876.",
+        "aiInsight": "Original ketchup was a fish sauce — unrecognisable from today's tomato version. The transformation from salty/fermented to sweet/tomato took 200 years and multiple countries.",
+        "nameChanges": [
+          {
+            "name": "Ke-tsiap / Kecap",
+            "period": "1690s CE",
+            "era": "Qing Dynasty / Southeast Asia",
+            "language": "Hokkien Chinese / Malay",
+            "meaning": "Brine of pickled fish or shellfish",
+            "context": "Fermented fish sauce used in Fujian province and throughout Southeast Asia.",
+            "color": "#7c3aed",
+            "source": "British Colonial Trade Records, 1690s",
+            "current": false
+          },
+          {
+            "name": "Catsup / Catchup",
+            "period": "1690-1800s",
+            "era": "British Colonial",
+            "language": "English",
+            "meaning": "Phonetic rendering of ke-tsiap",
+            "context": "British sailors brought Southeast Asian fish sauce home. Early British recipes used anchovies and mushrooms — no tomatoes.",
+            "color": "#4f46e5",
+            "source": "English Cookbooks, 1690-1800",
+            "current": false
+          },
+          {
+            "name": "Ketchup",
+            "period": "1876 - Present",
+            "era": "Global Brand",
+            "language": "English (universal)",
+            "meaning": "Tomato-based sweet-acidic condiment",
+            "context": "Heinz recipe standardised ketchup globally. 650 million bottles sold annually.",
+            "color": "#16a34a",
+            "source": "H.J. Heinz Company Records, 1876",
+            "current": true
+          }
+        ],
+        "historicalContext": [
+          {
+            "period": "Asian Fish Sauce Origins (Pre-1700)",
+            "content": "Ke-tsiap was a pungent fermented fish sauce used across Southeast Asia."
+          },
+          {
+            "period": "British Adaptations (1700s)",
+            "content": "British adapted the concept using local ingredients — mushroom ketchup, walnut ketchup, oyster ketchup. No tomatoes."
+          },
+          {
+            "period": "American Tomato Version (1812-1876)",
+            "content": "Americans added tomatoes. Heinz introduced preservative-free tomato ketchup in 1876."
+          }
+        ],
+        "relatedTopics": [
+          {
+            "label": "Worcestershire Sauce",
+            "tag": "Condiment · British",
+            "slug": "worcestershire-sauce"
+          },
+          {
+            "label": "Soy Sauce",
+            "tag": "Condiment · Asian",
+            "slug": "soy-sauce"
+          }
+        ],
+        "quickFacts": [
+          {
+            "label": "Original ingredient",
+            "value": "Fish (not tomatoes)"
+          },
+          {
+            "label": "Word origin",
+            "value": "Hokkien ke-tsiap"
+          },
+          {
+            "label": "Heinz tomato ketchup",
+            "value": "1876"
+          },
+          {
+            "label": "Annual sales",
+            "value": "650+ million bottles"
+          },
+          {
+            "label": "Sugar content",
+            "value": "~4g per tablespoon"
+          }
+        ]
+      },
+      "comments": [
+        {
+          "author": "Tom Richards",
+          "avatar": "TR",
+          "text": "Mind-blowing that ketchup started as a fish sauce! The tomato version is less than 200 years old.",
+          "rating": 5,
+          "likes": 89
+        }
+      ]
+    },
+    {
+      "query": "nike",
+      "slug": "nike",
+      "category": "Companies & Brands",
+      "searchCount": 356,
+      "featured": false,
+      "topicData": {
+        "title": "Nike",
+        "subtitle": "Brand · Athletic Footwear and Apparel",
+        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=70",
+        "type": "Company",
+        "country": "USA",
+        "state": "Oregon",
+        "founded": "1964 CE (as Blue Ribbon Sports)",
+        "population": "N/A",
+        "coordinates": "45.5051 N, 122.6750 W",
+        "languages": [
+          "English"
+        ],
+        "summary": "Nike was originally Blue Ribbon Sports, founded by Phil Knight and Bill Bowerman in 1964 as a US distributor of Japanese Onitsuka Tiger shoes. Renamed Nike in 1971 — after the Greek goddess of victory — just before launching its own shoe line.",
+        "aiInsight": "The Nike name was suggested by Jeff Johnson (first employee) reportedly from a dream. The Swoosh logo was designed by Carolyn Davidson for 5. Phil Knight reportedly said he did not love it but it would grow on him — it became the world most recognised logo.",
+        "nameChanges": [
+          {
+            "name": "Blue Ribbon Sports",
+            "period": "1964-1971",
+            "era": "Startup",
+            "language": "English",
+            "meaning": "Symbol of first place / excellence",
+            "context": "Phil Knight and Bill Bowerman distributed Onitsuka Tiger shoes from Japan.",
+            "color": "#7c3aed",
+            "source": "Oregon Business Incorporation, 1964",
+            "current": false
+          },
+          {
+            "name": "Nike, Inc.",
+            "period": "1971 - Present",
+            "era": "Modern Brand",
+            "language": "Greek (anglicised)",
+            "meaning": "Greek goddess of victory",
+            "context": "Name suggested by Jeff Johnson. Launched with the Swoosh logo (designed for 5). Just Do It tagline added 1988.",
+            "color": "#16a34a",
+            "source": "Nike Inc. Incorporation, 1971",
+            "current": true
+          }
+        ],
+        "historicalContext": [
+          {
+            "period": "Onitsuka Tiger Distribution (1964-1971)",
+            "content": "Knight sold shoes from his car at track meets. Bowerman experimented with shoe designs using a waffle iron."
+          },
+          {
+            "period": "Nike Launch (1971-1985)",
+            "content": "Own shoe line launched. Air technology introduced 1979. Michael Jordan signed 1984."
+          },
+          {
+            "period": "Global Dominance (1985-Present)",
+            "content": "Just Do It campaign 1988. Tiger Woods partnership 1996. 1B revenue today."
+          }
+        ],
+        "relatedTopics": [
+          {
+            "label": "Adidas",
+            "tag": "Brand · Germany",
+            "slug": "adidas"
+          },
+          {
+            "label": "Air Jordan",
+            "tag": "Shoe Line · Nike",
+            "slug": "air-jordan"
+          }
+        ],
+        "quickFacts": [
+          {
+            "label": "Original name",
+            "value": "Blue Ribbon Sports (1964)"
+          },
+          {
+            "label": "Renamed Nike",
+            "value": "1971"
+          },
+          {
+            "label": "Swoosh cost",
+            "value": "5 (Carolyn Davidson)"
+          },
+          {
+            "label": "Just Do It tagline",
+            "value": "1988"
+          },
+          {
+            "label": "Annual revenue",
+            "value": "1 billion (2023)"
+          }
+        ]
+      },
+      "comments": []
+    },
+    {
+      "query": "lotus",
+      "slug": "lotus",
+      "category": "Plants & Trees",
+      "searchCount": 189,
+      "featured": false,
+      "topicData": {
+        "title": "Lotus",
+        "subtitle": "Plant · Nelumbo nucifera · Sacred Flower of Asia",
+        "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=70",
+        "type": "Plant",
+        "country": "India / Egypt / Southeast Asia",
+        "state": "",
+        "founded": "Referenced in texts 5000+ years",
+        "population": "N/A",
+        "coordinates": "N/A",
+        "languages": [
+          "Sanskrit",
+          "Egyptian",
+          "Greek",
+          "Latin"
+        ],
+        "summary": "The lotus holds the distinction of being sacred to three world religions simultaneously — Hinduism, Buddhism, and ancient Egyptian religion. Its name varies significantly across cultures: Padma in Sanskrit, Nilufar in Persian, Lotus in Greek.",
+        "aiInsight": "The lotus has the remarkable property of emerging clean from muddy water — a self-cleaning mechanism now studied by nanotechnology researchers as the Lotus Effect. This physical property inspired its spiritual symbolism of purity across three independent civilisations.",
+        "nameChanges": [
+          {
+            "name": "Padma / Kamala",
+            "period": "2000 BCE",
+            "era": "Ancient India",
+            "language": "Sanskrit",
+            "meaning": "Lotus / pink-hued",
+            "context": "National flower of India. Symbol of Brahma, Vishnu, Lakshmi, Saraswati. Core Buddhist symbol.",
+            "color": "#4f46e5",
+            "source": "Rigveda, c.1500 BCE",
+            "current": false
+          },
+          {
+            "name": "Nelumbo nucifera",
+            "period": "1753 - Present",
+            "era": "Scientific Modern",
+            "language": "Latin (Sinhalese root)",
+            "meaning": "Sinhalese nelum + nucifera (nut-bearing)",
+            "context": "National flower of India and Vietnam.",
+            "color": "#16a34a",
+            "source": "Linnaeus and later Gaertner, 1788",
+            "current": true
+          }
+        ],
+        "historicalContext": [
+          {
+            "period": "Hindu and Buddhist Traditions (2000 BCE-Present)",
+            "content": "Central symbol in both religions. Deities sit or stand on lotus thrones."
+          },
+          {
+            "period": "Scientific Study (1700s-Present)",
+            "content": "Lotus Effect (self-cleaning) discovered 1970s by Wilhelm Barthlott. Applied to nanotechnology surfaces."
+          }
+        ],
+        "relatedTopics": [
+          {
+            "label": "Buddhist Symbolism",
+            "tag": "Religion",
+            "slug": "buddhist-symbolism"
+          },
+          {
+            "label": "Padma Awards",
+            "tag": "Indian Honours",
+            "slug": "padma-awards"
+          }
+        ],
+        "quickFacts": [
+          {
+            "label": "Scientific name",
+            "value": "Nelumbo nucifera"
+          },
+          {
+            "label": "National flower",
+            "value": "India, Vietnam"
+          },
+          {
+            "label": "Sacred to",
+            "value": "Hinduism, Buddhism, Ancient Egypt"
+          },
+          {
+            "label": "Self-cleaning",
+            "value": "Lotus Effect — nano surface structure"
+          },
+          {
+            "label": "Edible parts",
+            "value": "Seeds, roots (lotus root), petals"
+          }
+        ]
+      },
+      "comments": []
+    }
+  ]
+}

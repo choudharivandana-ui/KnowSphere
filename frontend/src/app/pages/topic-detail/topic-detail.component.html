@@ -1,0 +1,406 @@
+<div class="topic-page">
+
+  <!-- Loading -->
+  @if (loading) {
+    <div class="text-center py-5 mt-5">
+      <div class="spinner-border" style="color:#5B5BD6; width:2.5rem; height:2.5rem"></div>
+      <p class="text-muted mt-3">Loading knowledge panel…</p>
+    </div>
+  }
+
+  <!-- Error -->
+  @if (!loading && error) {
+    <div class="container-xl px-3 py-5">
+      <div class="alert-err"><i class="bi bi-exclamation-circle icon"></i>{{ error }}</div>
+      <a routerLink="/" class="btn-back mt-3 d-inline-flex align-items-center gap-2">
+        <i class="bi bi-arrow-left icon"></i> Back to Home
+      </a>
+    </div>
+  }
+
+  @if (!loading && topic) {
+    <div class="container-xl px-3 py-4">
+
+      <!-- Breadcrumb -->
+      <nav class="tp-breadcrumb mb-3">
+        <a routerLink="/">Home</a>
+        <i class="bi bi-chevron-right"></i>
+        <a routerLink="/categories">{{ topic.category }}</a>
+        <i class="bi bi-chevron-right"></i>
+        <span>{{ topic.topicData.title }}</span>
+      </nav>
+
+      <div class="row g-4">
+
+        <!-- LEFT CONTENT -->
+        <div class="col-lg-8">
+
+          <!-- Hero -->
+          <div class="hero-card mb-4">
+            @if (topic.topicData.image) {
+              <img [src]="topic.topicData.image" alt="topic image" class="hero-img" />
+            }
+            <div class="hero-content">
+              <span class="tp-type-badge">{{ topic.topicData.type || topic.category }}</span>
+              <h1 class="tp-title">{{ topic.topicData.title }}</h1>
+              <p class="tp-subtitle">{{ topic.topicData.subtitle }}</p>
+              <div class="d-flex flex-wrap gap-2 mt-3">
+                @if (topic.topicData.country) {
+                  <span class="meta-pill"><i class="bi bi-geo-alt"></i> {{ topic.topicData.country }}</span>
+                }
+                @if (topic.topicData.founded) {
+                  <span class="meta-pill"><i class="bi bi-calendar3"></i> Est. {{ topic.topicData.founded }}</span>
+                }
+                @if (topic.topicData.population && topic.topicData.population !== 'N/A') {
+                  <span class="meta-pill"><i class="bi bi-people"></i> {{ topic.topicData.population }}</span>
+                }
+                @if (topic.topicData.languages?.length) {
+                  <span class="meta-pill"><i class="bi bi-translate"></i> {{ topic.topicData.languages.join(', ') }}</span>
+                }
+              </div>
+
+              <div class="tp-summary mt-4">
+            <p>{{ topic.topicData.summary }}</p>
+          </div> 
+            </div>
+          </div>
+
+          <!-- Summary -->
+          
+
+          <!-- AI Insight -->
+          @if (topic.topicData.aiInsight) {
+            <div class="ai-insight mb-4">
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="ai-icon"><i class="bi bi-stars"></i></div>
+                  <span class="ai-label">AI Insight</span>
+                </div>
+                <div class="ai-actions">
+                  <button class="ai-action-btn" (click)="copyInsight()" [title]="copied ? 'Copied!' : 'Copy'">
+                    <i class="bi" [ngClass]="copied ? 'bi-check2' : 'bi-copy'"></i>
+                    <span>{{ copied ? 'Copied!' : 'Copy' }}</span>
+                  </button>
+                  <button class="ai-action-btn" (click)="shareInsight()" title="Share">
+                    <i class="bi bi-share"></i>
+                    <span>Share</span>
+                  </button>
+                </div>
+              </div>
+              <p class="mb-0">{{ topic.topicData.aiInsight }}</p>
+            </div>
+          }
+
+          <!-- Tabs -->
+          <div class="tp-tabs mb-4">
+            <button class="tp-tab" [class.active]="activeTab==='timeline'" (click)="setTab('timeline')">
+              <i class="bi bi-clock-history"></i> Name Timeline
+            </button>
+            <button class="tp-tab" [class.active]="activeTab==='context'" (click)="setTab('context')">
+              <i class="bi bi-book"></i> Historical Context
+            </button>
+            <button class="tp-tab" [class.active]="activeTab==='facts'" (click)="setTab('facts')">
+              <i class="bi bi-info-circle"></i> Quick Facts
+            </button>
+          </div>
+
+          <!-- TIMELINE -->
+          @if (activeTab === 'timeline') {
+            <div class="timeline-wrap">
+              @for (nc of topic.topicData.nameChanges ?? []; track $index; let i=$index) {
+                <div class="tl-item" [class.current]="nc.current">
+                  <div class="tl-marker" [style.background]="nc.color || '#5B5BD6'"></div>
+                  <div class="tl-body">
+                    <div class="tl-header" (click)="toggleItem(i)">
+                      <div class="d-flex align-items-center gap-3 flex-wrap">
+                        <span class="tl-name" [style.color]="nc.color || '#5B5BD6'">{{ nc.name }}</span>
+                        <span class="tl-period">{{ nc.period }}</span>
+                        @if (nc.era) { <span class="tl-era">{{ nc.era }}</span> }
+                        @if (nc.current) { <span class="tl-current">Current Name</span> }
+                      </div>
+                      <i class="bi" [ngClass]="expandedItem!==i ? 'bi-chevron-down' : 'bi-chevron-up'"></i>
+                    </div>
+                    @if (expandedItem === i) {
+                      <div class="tl-detail">
+                        @if (nc.language) { <p><strong>Language:</strong> {{ nc.language }}</p> }
+                        @if (nc.meaning) { <p><strong>Meaning:</strong> {{ nc.meaning }}</p> }
+                        @if (nc.context) { <p><strong>Context:</strong> {{ nc.context }}</p> }
+                        @if (nc.source) {
+                          <p class="mb-0"><strong>Source:</strong> <em>{{ nc.source }}</em></p>
+                        }
+                      </div>
+                    }
+                  </div>
+                </div>
+              }
+            </div>
+          }
+
+          <!-- HISTORICAL CONTEXT -->
+          @if (activeTab === 'context') {
+            <div class="context-wrap">
+              @for (hc of topic.topicData.historicalContext ?? []; track $index; let i=$index) {
+                <div class="ctx-card">
+                  <div class="ctx-bar" [style.background]="getContextColor(i)"></div>
+                  <div>
+                    <h5 class="ctx-period">{{ hc.period }}</h5>
+                    <p class="ctx-content mb-0">{{ hc.content }}</p>
+                  </div>
+                </div>
+              }
+            </div>
+          }
+
+          <!-- QUICK FACTS -->
+          @if (activeTab === 'facts') {
+            <div class="facts-wrap">
+              <table class="facts-table">
+                @for (f of topic.topicData.quickFacts ?? []; track $index) {
+                  <tr>
+                    <td class="facts-label">{{ f.label }}</td>
+                    <td class="facts-value">{{ f.value }}</td>
+                  </tr>
+                }
+                @if (topic.topicData.languages?.length) {
+                  <tr>
+                    <td class="facts-label">Languages</td>
+                    <td class="facts-value">{{ topic.topicData.languages.join(', ') }}</td>
+                  </tr>
+                }
+              </table>
+            </div>
+          }
+
+          <!-- ═══════════════════════════════════════════════
+               COMMENTS SECTION
+          ═══════════════════════════════════════════════ -->
+          <div class="comments-section mt-5">
+            <h4 class="comments-heading">
+              <i class="bi bi-chat-dots"></i> Comments
+            </h4>
+
+            <!-- Add Comment Form -->
+            <div class="comment-form-card mb-4">
+              <!-- Star Rating -->
+              <div class="rating-row mb-3">
+                <span class="rating-label">Rate this topic</span>
+                <div class="stars-input">
+                  @for (s of [1,2,3,4,5]; track s) {
+                    <i class="bi"
+                       [ngClass]="s <= rating ? 'bi-star-fill text-warning' : 'bi-star'"
+                       (click)="rating = s"
+                       style="cursor:pointer; font-size:1.2rem;"></i>
+                  }
+                </div>
+              </div>
+
+              <!-- Author -->
+              <input
+                type="text"
+                class="comment-input mb-2"
+                placeholder="Your name (optional)"
+                [(ngModel)]="commentAuthor" />
+
+              <!-- Comment Text -->
+              <textarea
+                class="comment-textarea mb-3"
+                placeholder="Add a comment…"
+                rows="3"
+                [(ngModel)]="commentText">
+              </textarea>
+
+              <button class="btn-post-comment"
+                      (click)="postComment()"
+                      [disabled]="postingComment || !commentText.trim()">
+                @if (postingComment) {
+                  <span class="spinner-border spinner-border-sm me-2"></span>
+                }
+                Post Comment
+              </button>
+            </div>
+
+            <!-- Comment List -->
+            @if (topic.comments?.length) {
+              <div class="comment-list">
+                @for (c of topic.comments; track c._id) {
+                  <div class="comment-card">
+                    <!-- Avatar -->
+                    <div class="comment-avatar"
+                         [style.background]="avatarColor(c.avatar || 'AN')">
+                      {{ c.avatar || 'AN' }}
+                    </div>
+
+                    <div class="comment-body">
+                      <div class="comment-meta">
+                        <span class="comment-author">{{ c.author }}</span>
+                        @if (c.createdAt) {
+                          <span class="comment-time">
+                            {{ c.createdAt | date:'mediumDate' }}
+                          </span>
+                        }
+                      </div>
+
+                      <!-- Stars -->
+                      <div class="comment-stars mb-1">
+                        @for (s of stars(c.rating || 0); track $index) {
+                          <i class="bi bi-star-fill" style="color:#f59e0b; font-size:.8rem;"></i>
+                        }
+                        @for (s of emptyStars(c.rating || 0); track $index) {
+                          <i class="bi bi-star" style="color:#d1d5db; font-size:.8rem;"></i>
+                        }
+                      </div>
+
+                      <p class="comment-text">{{ c.text }}</p>
+
+                      <!-- Like button -->
+                      <button class="btn-like" (click)="likeComment(c._id || '')">
+                        <i class="bi bi-hand-thumbs-up"></i>
+                        <span>{{ c.likes || 0 }} likes</span>
+                      </button>
+                    </div>
+                  </div>
+                }
+              </div>
+            } @else {
+              <p class="text-muted small">No comments yet. Be the first!</p>
+            }
+          </div>
+          <!-- end comments -->
+
+        </div>
+        <!-- end col-lg-8 -->
+
+        <!-- ═══════════════════════════════════════════════
+             RIGHT SIDEBAR
+        ═══════════════════════════════════════════════ -->
+        <div class="col-lg-4">
+          <div class="sidebar-sticky">
+
+            <!-- Knowledge Panel -->
+            <div class="sidebar-card mb-4">
+              <div class="sidebar-panel-label">
+                <i class="bi bi-diagram-3"></i> KNOWLEDGE PANEL
+              </div>
+              <h3 class="sidebar-title">{{ topic.topicData.title }}</h3>
+              <p class="sidebar-subtitle text-muted small mb-3">
+                {{ topic.topicData.type || topic.category }}
+                @if (topic.topicData.country) { · {{ topic.topicData.country }} }
+              </p>
+
+              @if (topic.topicData.image) {
+                <img [src]="topic.topicData.image"
+                     alt="{{ topic.topicData.title }}"
+                     class="sidebar-img mb-3" />
+              }
+
+              <!-- Key facts -->
+              <div class="sidebar-facts">
+                @if (topic.topicData.country) {
+                  <div class="sf-row">
+                    <span class="sf-label">Country</span>
+                    <span class="sf-value">{{ topic.topicData.country }}</span>
+                  </div>
+                }
+                @if (topic.topicData.founded) {
+                  <div class="sf-row">
+                    <span class="sf-label">Founded</span>
+                    <span class="sf-value">{{ topic.topicData.founded }}</span>
+                  </div>
+                }
+                @if (topic.topicData.population && topic.topicData.population !== 'N/A') {
+                  <div class="sf-row">
+                    <span class="sf-label">Population</span>
+                    <span class="sf-value">{{ topic.topicData.population }}</span>
+                  </div>
+                }
+                @if (topic.topicData.coordinates && topic.topicData.coordinates !== 'N/A') {
+                  <div class="sf-row">
+                    <span class="sf-label">Coordinates</span>
+                    <span class="sf-value">{{ topic.topicData.coordinates }}</span>
+                  </div>
+                }
+              </div>
+
+              <!-- Name count badge -->
+              @if (topic.topicData.nameChanges?.length) {
+                <div class="name-count-badge mt-3">
+                  <div class="nc-number">{{ topic.topicData.nameChanges!.length }}</div>
+                  <div class="nc-label">
+                    <strong>Documented Name Changes</strong><br>
+                    <span class="text-muted small">
+                      Since {{ topic.topicData.nameChanges![0]?.period || 'historical records' }}
+                    </span>
+                  </div>
+                </div>
+              }
+            </div>
+
+            <!-- All Names list -->
+            @if (topic.topicData.nameChanges?.length) {
+              <div class="sidebar-card mb-4">
+                <h6 class="sidebar-section-title">ALL NAMES</h6>
+                <div class="all-names-list">
+                  @for (nc of topic.topicData.nameChanges; track $index) {
+                    <div class="an-row" [class.an-current]="nc.current">
+                      <div class="an-dot" [style.background]="nc.color || '#5B5BD6'"></div>
+                      <span class="an-name">
+                        {{ nc.name }}
+                        @if (nc.current) { <span class="an-badge">✓ Current</span> }
+                      </span>
+                      <span class="an-period text-muted small">{{ nc.period }}</span>
+                    </div>
+                  }
+                </div>
+              </div>
+            }
+
+            <!-- Related Topics — loaded from DB/JSON via API -->
+            <div class="sidebar-card mb-4">
+              <h6 class="sidebar-section-title">
+                <i class="bi bi-link-45deg"></i> Related Topics
+              </h6>
+
+              @if (loadingRelated) {
+                <div class="text-center py-2">
+                  <div class="spinner-border spinner-border-sm" style="color:#5B5BD6"></div>
+                </div>
+              }
+
+              @if (!loadingRelated && relatedTopics.length) {
+                <div class="related-list">
+                  @for (rt of relatedTopics; track rt.slug) {
+                    <div class="related-item" (click)="goRelated(rt.slug)">
+                      <div class="related-icon">
+                        @if (rt.image) {
+                          <img [src]="rt.image" [alt]="rt.title"
+                               style="width:34px;height:34px;object-fit:cover;border-radius:8px;" />
+                        } @else {
+                          <i class="bi bi-geo-alt-fill"></i>
+                        }
+                      </div>
+                      <div class="related-info">
+                        <span class="related-name">{{ rt.title }}</span>
+                        <span class="related-tag text-muted small">
+                          {{ rt.type || rt.category }}{{ rt.subtitle ? ' · ' + rt.subtitle : '' }}
+                        </span>
+                      </div>
+                      <i class="bi bi-chevron-right text-muted small"></i>
+                    </div>
+                  }
+                </div>
+              }
+
+              @if (!loadingRelated && !relatedTopics.length) {
+                <p class="text-muted small mb-0">No related topics found.</p>
+              }
+            </div>
+
+          </div>
+        </div>
+        <!-- end sidebar col -->
+
+      </div>
+    </div>
+  }
+
+</div>

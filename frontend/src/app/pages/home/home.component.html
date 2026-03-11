@@ -1,0 +1,189 @@
+<!-- ─── HERO ───────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="orb orb-a"></div>
+  <div class="orb orb-b"></div>
+  <div class="container-xl px-3">
+    <div class="hero-inner text-center">
+
+      <div class="hero-badge">
+        <span class="dot"></span> AI-Powered Knowledge Engine
+      </div>
+
+      <h1 class="hero-title">
+        Explore the <span style="color:#c4b5fd">History &</span><br>
+        <span class="gradient-text">Evolution</span> of Any Topic
+      </h1>
+      <p class="hero-sub">
+        Discover name changes, historical contexts, and rich knowledge panels for cities,
+        countries, foods, jewellery, and thousands more.
+      </p>
+
+      <!-- Search -->
+      <div class="search-wrap position-relative mx-auto">
+        <div class="search-box" [class.open]="showSug">
+          <i class="bi bi-search icon"></i>
+          <input
+            [(ngModel)]="q"
+            (ngModelChange)="onInput()"
+            (focus)="showSug=true"
+            (blur)="hideSuggestions()"
+            (keydown.enter)="search()"
+            placeholder='Try "Pune", "Istanbul", "Sri Lanka", "Peking Duck"…'
+            class="search-input"
+          />
+          <button class="search-btn" (click)="search()">
+            <i class="bi bi-stars icon"></i> AI Search
+          </button>
+        </div>
+
+        @if (showSug && filteredSug.length) {
+          <div class="sug-drop">
+            <div class="sug-hdr"><i class="bi bi-clock-history"></i> Popular Searches</div>
+            @for (s of filteredSug; track s) {
+              <div class="sug-row" (mousedown)="pickSug(s)">
+                <i class="bi bi-search sug-icon"></i>
+                <span class="flex-grow-1">{{ s }}</span>
+                <i class="bi bi-arrow-up-left sug-arrow"></i>
+              </div>
+            }
+          </div>
+        }
+      </div>
+
+      <!-- Quick tags -->
+      <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+        @for (t of quickTags; track t) {
+          <button class="qtag" (click)="pickTag(t)">{{ t }}</button>
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── STATS BAR ──────────────────────────────── -->
+<div class="stats-bar">
+  <div class="container-xl px-3">
+    <div class="row g-0 text-center">
+      <div class="col-6 col-md-3 stat-cell border-end">
+        <div class="stat-val"><span class="sicon" ><i class="bi bi-book"></i></span>50,000+</div>
+        <div class="stat-lbl">Topics Indexed</div>
+      </div>
+      <div class="col-6 col-md-3 stat-cell border-end">
+        <div class="stat-val"><span class="sicon"><i class="bi bi-globe-americas"></i></span>180+</div>
+        <div class="stat-lbl">Countries Covered</div>
+      </div>
+      <div class="col-6 col-md-3 stat-cell border-end">
+        <div class="stat-val"><span class="sicon"><i class="bi bi-clock"></i></span>1,200+</div>
+        <div class="stat-lbl">Name Change Records</div>
+      </div>
+      <div class="col-6 col-md-3 stat-cell">
+        <div class="stat-val"><span class="sicon"><i class="bi bi-star"></i></span>98%</div>
+        <div class="stat-lbl">Accuracy Rate</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── MAIN BODY ──────────────────────────────── -->
+<div class="home-body">
+  <div class="container-xl px-3 py-5">
+
+    <!-- Featured -->
+    <section class="mb-5">
+      <div class="d-flex align-items-end justify-content-between mb-4">
+        <div>
+          <div class="eyebrow"><i class="bi bi-lightning"></i> Featured</div>
+          <h2 class="sec-title">Popular Knowledge Panels</h2>
+        </div>
+        <a routerLink="/categories" class="view-all">View All <i class="bi bi-chevron-right"></i></a>
+      </div>
+
+      @if (loadingFeatured) {
+        <div class="row g-3">@for (i of [1,2,3]; track i) { <div class="col-md-4"><div class="skel-card"></div></div> }</div>
+      } @else {
+        <div class="row g-3">
+          @for (topic of (featuredTopics.length ? featuredTopics : fallbackTopics).slice(0,3); track topic.slug; let i=$index) {
+            <div class="col-md-4">
+              <div class="tcard h-100" (click)="go(topic.slug)">
+                <div class="d-flex align-items-start justify-content-between mb-3">
+                  <span class="type-badge" [style.background]="typeBg[i%typeBg.length]" [style.color]="typeColor[i%typeColor.length]">
+                    {{ topic.topicData?.type || topic.category }}
+                  </span>
+                  <span class="changes-badge">{{ changesCount(topic) }} name changes</span>
+                </div>
+                <h3 class="tcard-name">{{ topic.topicData?.title }}</h3>
+                <p class="tcard-sub">{{ topic.topicData?.subtitle }}</p>
+                <p class="tcard-desc">{{ (topic.topicData?.summary || '') | slice:0:110 }}{{ (topic.topicData?.summary?.length || 0) > 110 ? '…' : '' }}</p>
+                <div class="tcard-cta mt-auto">Explore Timeline <i class="bi bi-arrow-right"></i></div>
+              </div>
+            </div>
+          }
+        </div>
+      }
+    </section>
+
+    <!-- Categories -->
+    <section class="mb-5">
+      <div class="eyebrow mb-1"><i class="bi bi-grid-fill"></i> Browse by Category</div>
+      <h2 class="sec-title mb-4">What Would You Like to Explore?</h2>
+      <div class="row g-3">
+        @for (c of categories; track c.name) {
+          <div class="col-6 col-md-4 col-lg-2">
+            <a [routerLink]="['/search']" [queryParams]="{category: c.name}" class="catcard text-center text-decoration-none d-block">
+              <div class="catcard-icon mx-auto mb-2" [style.background]="c.bg"><i class="bi" [ngClass]="c.icon"></i></div>
+              <div class="catcard-name">{{ c.name }}</div>
+              <div class="catcard-count">{{ c.count }} topics</div>
+            </a>
+          </div>
+        }
+      </div>
+    </section>
+
+    <!-- Bottom row: Trending + About -->
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="panel h-100">
+          <div class="panel-title mb-3"><i class="bi bi-graph-up-arrow text-primary"></i> Trending Searches</div>
+          @if (loadingTrending) {
+            @for (i of [1,2,3,4,5,6,7,8]; track i) { <div class="skel-line mb-2"></div> }
+          } @else {
+            @for (t of trendingTopics; track t.slug; let i=$index) {
+              <a class="trend-row text-decoration-none" [routerLink]="['/topic', t.slug]">
+                <span class="trend-rank">{{ i+1 }}</span>
+                <div class="flex-grow-1">
+                  <div class="trend-name">{{ t.topicData?.title }}</div>
+                  <div class="trend-sub">{{ t.topicData?.subtitle }}</div>
+                </div>
+                <i class="bi bi-chevron-right text-muted small"></i>
+              </a>
+            }
+          }
+        </div>
+      </div>
+
+      <div class="col-lg-8">
+        <div class="dark-panel h-100">
+          <div class="dark-orb"></div>
+          <div class="position-relative">
+            <div class="dark-eyebrow mb-3">✦ How KnowSphere Works</div>
+            <h3 class="dark-title">AI-Powered Knowledge Panels with Historical Depth</h3>
+            <p class="dark-desc">KnowSphere uses advanced AI to surface structured information about any topic — from earliest records to modern naming conventions.</p>
+            <div class="row g-2 mb-4">
+              @for (f of features; track f.title) {
+                <div class="col-6">
+                  <div class="feat-box">
+                    <div class="feat-title">{{ f.title }}</div>
+                    <div class="feat-desc">{{ f.desc }}</div>
+                  </div>
+                </div>
+              }
+            </div>
+            <a routerLink="/about" class="learn-more-btn">Learn More <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

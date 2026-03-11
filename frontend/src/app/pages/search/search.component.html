@@ -1,0 +1,300 @@
+<div class="search-page">
+  <div class="container-xl px-3 py-4">
+    <div class="row g-4">
+
+  <!-- ── MAIN ─────────────────────────────── -->
+  <div class="col-lg-8">
+
+    <!-- Search bar -->
+    <div class="d-flex gap-2 mb-3">
+      <div class="main-search flex-grow-1">
+        <i class="bi bi-search icon"></i>
+        <input [(ngModel)]="q" (keydown.enter)="doSearch()" placeholder="Search any topic, city, country, food…" />
+      </div>
+      <button class="btn-search" (click)="doSearch()">
+        <i class="bi bi-stars icon"></i> Search
+      </button>
+    </div>
+
+    <!-- Filter pills — only when text searching -->
+    @if (q) {
+      <div class="d-flex flex-wrap gap-2 mb-4">
+        @for (f of filters; track f) {
+          <button class="fpill" [class.active]="activeFilter===f" (click)="setFilter(f)">
+            {{ f }}
+          </button>
+        }
+      </div>
+    }
+
+    <!-- Result meta + Sort controls -->
+    @if (!loading && results.length > 0) {
+      <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
+
+        <span class="result-meta">
+          <strong>{{ results.length }} result{{ results.length > 1 ? 's' : '' }}</strong>
+          @if (q) {
+            for <em class="text-primary">"{{ q }}"</em>
+          } @else if (activeCategory) {
+            in <em class="text-primary">{{ activeCategory }}</em>
+          }
+          @if (aiGenerated) {
+            <span class="ai-gen-badge ms-2">✦ AI Generated</span>
+          }
+        </span>
+
+        <div class="d-flex align-items-center gap-2">
+
+          <!-- Sort A–Z / Z–A -->
+          <div class="sort-group">
+            <!-- <button class="sort-btn" [class.active]="sortOrder==='default'"
+                    (click)="setSort('default')" title="Default order">
+              <i class="bi bi-list-ul"></i>
+            </button> -->
+            <button class="sort-btn" [class.active]="sortOrder==='asc'"
+                    (click)="setSort('asc')" title="Sort A → Z">
+              <i class="bi bi-sort-alpha-down"></i> <span class="sort-label">A–Z</span>
+            </button>
+            <button class="sort-btn" [class.active]="sortOrder==='desc'"
+                    (click)="setSort('desc')" title="Sort Z → A">
+              <i class="bi bi-sort-alpha-up-alt"></i> <span class="sort-label">Z–A</span>
+            </button>
+          </div>
+
+          <!-- <span class="ai-badge">
+            <i class="bi bi-stars icon"></i> AI-Enhanced
+          </span> -->
+
+        </div>
+      </div>
+    }
+
+    <!-- Loading -->
+    @if (loading) {
+      <div class="text-center py-5">
+        <div class="spinner-border" style="color:#5B5BD6;width:2rem;height:2rem"></div>
+        <p class="text-muted mt-3 mb-0 small">
+          Searching with AI — may generate new knowledge panel…
+        </p>
+      </div>
+    }
+
+    <!-- Error -->
+    @if (!loading && error) {
+      <div class="alert-err mb-4">
+        <i class="bi bi-exclamation-circle icon"></i> {{ error }}
+      </div>
+    }
+
+    <!-- AI Summary -->
+    @if (!loading && aiSummary) {
+      <div class="ai-summary mb-4">
+        <div class="d-flex align-items-center gap-2 mb-2">
+          <div class="ai-icon"><i class="bi bi-stars icon"></i></div>
+          <span class="ai-label">AI Summary</span>
+        </div>
+        <p class="ai-text mb-3">{{ aiSummary }}</p>
+        <div class="d-flex gap-2">
+          <button class="ai-action" (click)="copy()">
+            <i class="bi bi-clipboard icon"></i> Copy
+          </button>
+          <button class="ai-action">
+            <i class="bi bi-share icon"></i> Share
+          </button>
+        </div>
+      </div>
+    }
+
+    <!-- Results -->
+    @for (topic of pagedResults; track topic.slug) {
+      <div class="rcard mb-3" (click)="go(topic.slug)">
+
+        <div class="d-flex align-items-start justify-content-between mb-2 flex-wrap gap-2">
+          <div class="d-flex align-items-center gap-2">
+            <h3 class="rcard-title mb-0">{{ topic.topicData?.title }}</h3>
+            <span class="rcard-type">{{ topic.topicData?.type || topic.category }}</span>
+          </div>
+          <div class="text-end">
+            <div class="rcard-count">{{ changesCount(topic) }} name changes</div>
+            @if (topic.topicData?.founded) {
+              <div class="rcard-since">Since {{ topic.topicData.founded }}</div>
+            }
+          </div>
+        </div>
+
+        <p class="rcard-loc mb-2">
+          <i class="bi bi-geo-alt icon"></i>
+          {{ topic.topicData?.subtitle }}
+        </p>
+
+        <p class="rcard-desc mb-3">{{ topic.topicData?.summary }}</p>
+
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+          <div class="d-flex flex-wrap gap-1">
+            @if (topic.topicData?.country) { <span class="rtag">{{ topic.topicData.country }}</span> }
+            @if (topic.topicData?.state)   { <span class="rtag">{{ topic.topicData.state }}</span> }
+            @if (topic.category)           { <span class="rtag">{{ topic.category }}</span> }
+          </div>
+          <span class="rcard-link">
+            View Knowledge Panel <i class="bi bi-arrow-right icon"></i>
+          </span>
+        </div>
+
+      </div>
+    }
+
+    <!-- Pagination -->
+    @if (!loading && totalPages > 1) {
+      <div class="pagination-wrap">
+        <button class="pg-btn" (click)="goPage(currentPage - 1)" [disabled]="currentPage === 1">
+          <i class="bi bi-chevron-left"></i>
+        </button>
+        @for (p of pageNumbers; track p) {
+          @if (p === -1) {
+            <span class="pg-ellipsis">…</span>
+          } @else {
+            <button class="pg-btn" [class.active]="p === currentPage" (click)="goPage(p)">{{ p }}</button>
+          }
+        }
+        <button class="pg-btn" (click)="goPage(currentPage + 1)" [disabled]="currentPage === totalPages">
+          <i class="bi bi-chevron-right"></i>
+        </button>
+        <span class="pg-info">
+          {{ (currentPage - 1) * pageSize + 1 }}–{{ min(currentPage * pageSize, results.length) }}
+          of {{ results.length }}
+        </span>
+      </div>
+    }
+
+    <!-- Empty states -->
+    @if (!loading && !error && results.length === 0 && q) {
+      <div class="empty text-center py-5">
+        <div class="empty-icon">🔍</div>
+        <h4>No results found</h4>
+        <p class="text-muted small">Try a different search term or browse categories.</p>
+        <a routerLink="/categories" class="btn-primary-ks">Browse Categories</a>
+      </div>
+    }
+
+    @if (!loading && !error && results.length === 0 && !q) {
+      <div class="empty text-center py-5">
+        <div class="empty-icon">✨</div>
+        <h4>Start Exploring</h4>
+        <p class="text-muted small">Type a city, country, food, or any topic to discover its history.</p>
+      </div>
+    }
+
+  </div><!-- /col-lg-8 -->
+
+  <!-- ── SIDEBAR ────────────────────────────── -->
+  <div class="col-lg-4">
+
+    <!-- Did You Know -->
+    <div class="sp sp-diyk mb-3">
+      <div class="diyk-title"><i class="bi bi-stars"></i> Did You Know?</div>
+      <p class="diyk-text">
+        <strong>{{ didYouKnow.highlight }}</strong> {{ didYouKnow.fact }}
+      </p>
+      <span class="diyk-link">{{ didYouKnow.link }}</span>
+    </div>
+
+    <!-- Related Topics -->
+    <div class="sp mb-3">
+      <div class="sp-title"><i class="bi bi-diagram-3"></i> Related Topics</div>
+
+      @if (loadingRelated) {
+        <div class="text-center py-2">
+          <div class="spinner-border spinner-border-sm" style="color:#5B5BD6"></div>
+        </div>
+      }
+
+      @if (!loadingRelated && relatedTopics.length) {
+        @for (t of relatedTopics; track t.slug) {
+          <div class="sp-related" (click)="searchRelated(t.slug)">
+            <span class="rel-dot"></span>
+            <div class="flex-grow-1 min-w-0">
+              <div class="rel-name">{{ t.title }}</div>
+              @if (t.type || t.category) {
+                <div class="rel-tag">{{ t.type || t.category }}</div>
+              }
+            </div>
+            <i class="bi bi-chevron-right ms-auto text-muted small"></i>
+          </div>
+        }
+      }
+
+      @if (!loadingRelated && !relatedTopics.length && results.length) {
+        <p class="text-muted small px-1 mb-0">No related topics found.</p>
+      }
+      @if (!results.length) {
+        <p class="text-muted small px-1 mb-0">Search to see related topics.</p>
+      }
+    </div>
+
+    <!-- Browse Categories -->
+    <div class="sp mb-3">
+      <div class="sp-title"><i class="bi bi-grid"></i> Browse Categories</div>
+      @for (c of categories; track c.name) {
+        <div class="sp-cat" (click)="browseCategory(c.name)">
+          <div class="sp-cat-icon" [style.background]="c.bg">
+            <i class="bi" [ngClass]="c.icon"></i>
+          </div>
+          <div class="flex-grow-1">
+            <div class="sp-obj-name">{{ c.name }}</div>
+            <div class="sp-obj-type">{{ c.count }} topics</div>
+          </div>
+          <i class="bi bi-chevron-right text-muted small"></i>
+        </div>
+      }
+    </div>
+
+    <!-- Recent Searches -->
+    <div class="sp mb-3">
+      <div class="sp-title"><i class="bi bi-clock-history"></i> Recent Searches</div>
+
+      @if (recentSearches.length > 0) {
+        @for (s of recentSearches; track s) {
+          <div class="sp-history-row">
+            <i class="bi bi-search sp-hist-icon"></i>
+            <span class="flex-grow-1" (click)="pickHistory(s)">{{ s }}</span>
+            <i class="bi bi-x sp-hist-del" (click)="removeRecent(s)" title="Remove"></i>
+          </div>
+        }
+        <button class="sp-clear-btn" (click)="clearRecent()">
+          <i class="bi bi-trash3"></i> Clear history
+        </button>
+      } @else {
+        <p class="text-muted small px-1 mb-0">No recent searches yet.</p>
+      }
+    </div>
+
+    <!-- Top Searches -->
+    <div class="sp mb-3">
+      <div class="sp-title"><i class="bi bi-fire"></i> Top Searches</div>
+
+      @if (topSearches.length) {
+        @for (s of topSearches; track s.slug; let i = $index) {
+          <div class="sp-top-row" (click)="go(s.slug)">
+            <span class="sp-top-rank" [class.gold]="i===0" [class.silver]="i===1" [class.bronze]="i===2">
+              {{ i + 1 }}
+            </span>
+            <div class="flex-grow-1">
+              <div class="sp-obj-name">{{ s.title }}</div>
+              <div class="sp-obj-type">{{ s.category }}</div>
+            </div>
+            <span class="sp-top-count">
+              <i class="bi bi-search"></i> {{ s.searchCount }}
+            </span>
+          </div>
+        }
+      } @else {
+        <div class="text-center py-2">
+          <div class="spinner-border spinner-border-sm" style="color:#5B5BD6"></div>
+        </div>
+      }
+    </div>
+
+  </div><!-- /col-lg-4 -->
+</div>
+  </div>
+</div>

@@ -1,0 +1,179 @@
+<div class="about-page">
+
+  <!-- ── HERO ─────────────────────────────────────── -->
+  <section class="ao-hero">
+    <div class="ao-orb ao-orb-a"></div>
+    <div class="ao-orb ao-orb-b"></div>
+    <div class="container-xl px-3">
+      <div class="ao-hero-inner text-center">
+        <div class="ao-badge">
+          <i class="bi bi-globe2"></i> About KnowSphere
+        </div>
+        <h1 class="ao-h1">
+          The World's First AI-Powered<br>
+          <span class="ao-gradient-text">Historical Knowledge Engine</span>
+        </h1>
+        <p class="ao-sub">
+          KnowSphere makes the rich, layered history of names and places accessible to everyone —
+          from researchers and students to curious minds who want to understand the world differently.
+        </p>
+        <div class="d-flex justify-content-center flex-wrap gap-3 mt-4">
+          <a routerLink="/search" class="ao-btn-primary"><i class="bi bi-search"></i> Start Exploring</a>
+          <a href="#how-it-works" class="ao-btn-ghost">How It Works</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MISSION ───────────────────────────────────── -->
+  <section class="container-xl px-3 py-5 my-3">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6">
+        <div class="ao-eyebrow"><i class="bi bi-stars"></i> Our Mission</div>
+        <h2 class="ao-sec-title mt-2">Names Tell the Story of Humanity</h2>
+        <p class="ao-body mt-3">
+          Every name change in history tells a story — of conquest, liberation, cultural pride,
+          colonial imposition, or simply evolving language. When Bombay became Mumbai, or when
+          Constantinople became Istanbul, these weren't just bureaucratic decisions. They were
+          declarations of identity.
+        </p>
+        <p class="ao-body">
+          KnowSphere was built to make these stories accessible. We believe that understanding
+          the history of names and places is fundamental to understanding human civilization itself.
+        </p>
+        <div class="d-flex flex-column gap-2 mt-4">
+          @for (p of missionPoints; track p) {
+            <div class="ao-check-row">
+              <i class="bi bi-check-circle-fill ao-check-icon"></i>
+              <span>{{ p }}</span>
+            </div>
+          }
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="ao-img-wrap position-relative">
+          <div class="ao-img-inner">
+            <img
+              src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=80"
+              alt="Library"
+              class="ao-img"
+            />
+          </div>
+          <div class="ao-float-stat ao-float-bottom">
+            <div class="ao-float-val">50K+</div>
+            <div class="ao-float-lbl">Topics Indexed</div>
+          </div>
+          <div class="ao-float-stat ao-float-top ao-float-accent">
+            <div class="ao-float-val">98%</div>
+            <div class="ao-float-lbl">Accuracy Rate</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HOW IT WORKS ──────────────────────────────── -->
+  <section id="how-it-works" class="ao-grey-section">
+    <div class="container-xl px-3 py-5">
+      <div class="text-center mb-5">
+        <div class="ao-eyebrow justify-content-center"><i class="bi bi-lightning-charge"></i> The Process</div>
+        <h2 class="ao-sec-title mt-2">How KnowSphere Works</h2>
+        <p class="ao-body-muted mt-2 mx-auto" style="max-width:440px">
+          From your search query to a rich, structured knowledge panel — in seconds.
+        </p>
+      </div>
+      <div class="row g-4">
+        @for (s of howItWorks; track s.step) {
+          <div class="col-md-6 col-lg-3">
+            <div class="ao-step-card">
+              <div class="ao-step-num" [style.color]="s.color">{{ s.step }}</div>
+              <div class="ao-step-icon" [style.background]="s.bg" [style.color]="s.color">
+                <i class="bi" [ngClass]="s.icon"></i>
+              </div>
+              <h4 class="ao-step-title mt-3">{{ s.title }}</h4>
+              <p class="ao-step-desc">{{ s.desc }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FEATURES ──────────────────────────────────── -->
+  <section class="container-xl px-3 py-5 my-3">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-5">
+        <img
+          src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80"
+          alt="AI Technology"
+          class="ao-feat-img"
+        />
+      </div>
+      <div class="col-lg-7">
+        <div class="ao-eyebrow"><i class="bi bi-cpu"></i> Platform Features</div>
+        <h2 class="ao-sec-title mt-2">Everything You Need to<br>Understand Any Topic</h2>
+        <p class="ao-body mt-3">
+          KnowSphere combines AI synthesis with verified historical scholarship to deliver
+          knowledge panels that go far deeper than a standard Wikipedia entry.
+        </p>
+        <div class="row g-2 mt-3">
+          @for (f of features; track f) {
+            <div class="col-12 col-sm-6">
+              <div class="ao-feat-item">
+                <i class="bi bi-check-circle-fill ao-check-icon"></i>
+                <span>{{ f }}</span>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TEAM ──────────────────────────────────────── -->
+  <section class="ao-grey-section">
+    <div class="container-xl px-3 py-5">
+      <div class="text-center mb-5">
+        <div class="ao-eyebrow justify-content-center"><i class="bi bi-people"></i> Our Team</div>
+        <h2 class="ao-sec-title mt-2">Built by Scholars & Engineers</h2>
+        <p class="ao-body-muted mt-2 mx-auto" style="max-width:480px">
+          A multidisciplinary team combining AI research, historical linguistics, and cultural anthropology.
+        </p>
+      </div>
+      <div class="row g-4">
+        @for (m of team; track m.name) {
+          <div class="col-sm-6 col-lg-3">
+            <div class="ao-team-card text-center">
+              <div class="ao-avatar">{{ m.initial }}</div>
+              <h4 class="ao-member-name mt-3">{{ m.name }}</h4>
+              <p class="ao-member-role">{{ m.role }}</p>
+              <p class="ao-member-exp">{{ m.expertise }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ───────────────────────────────────────── -->
+  <section class="container-xl px-3 py-5">
+    <div class="ao-cta-panel">
+      <div class="ao-cta-orb"></div>
+      <div class="position-relative text-center">
+        <div class="ao-eyebrow justify-content-center mb-3" style="color:#a5b4fc">
+          <i class="bi bi-stars"></i> Ready to Explore?
+        </div>
+        <h2 class="ao-cta-title">Start Your Knowledge Journey</h2>
+        <p class="ao-cta-sub mt-2">
+          Search any city, country, historical event, or cultural concept and discover
+          its complete naming history and context.
+        </p>
+        <div class="d-flex justify-content-center flex-wrap gap-3 mt-4">
+          <a routerLink="/search" class="ao-btn-white"><i class="bi bi-search"></i> Try KnowSphere</a>
+          <a routerLink="/search" class="ao-btn-ghost-white">Browse Categories <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>

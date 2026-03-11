@@ -1,0 +1,99 @@
+<!-- Header -->
+<div class="cat-header">
+  <div class="cat-header-orb cat-header-orb-a"></div>
+  <div class="cat-header-orb cat-header-orb-b"></div>
+  <div class="container-xl px-3">
+    <div class="row align-items-center g-3">
+      <div class="col-md-7">
+        <div class="eyebrow mb-2">🗂 Browse All Categories</div>
+        <h1 class="cat-h1">Explore by Topic Type</h1>
+        <p class="cat-sub">12 curated categories covering cities, science, food, culture, and much more.</p>
+      </div>
+      <div class="col-md-5">
+        <div class="cat-search-box">
+          <i class="bi bi-search"></i>
+          <input [(ngModel)]="filterText" placeholder="Filter categories…" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-xl px-3 py-5">
+  <div class="row g-4">
+
+    <!-- Category grid -->
+    <div class="col-lg-8">
+      <div class="row g-3">
+        @for (c of filtered; track c.name) {
+          <div class="col-md-6">
+            <div class="cat-card" [class.expanded]="expanded === c.name">
+              <div class="cat-card-header" (click)="toggle(c.name)">
+                <div class="cat-icon" [style.background]="c.bg">
+  <i class="bi" [ngClass]="c.icon" [style.color]="c.color"></i>
+</div>
+                <div class="flex-grow-1">
+                  <div class="cat-card-name">{{ c.name }}</div>
+                  <div class="cat-card-desc">{{ c.desc }}</div>
+                </div>
+                <div class="d-flex flex-column align-items-end gap-1">
+                  <span class="cat-count" [style.background]="c.bg" [style.color]="c.color">{{ c.count }}</span>
+                  <i class="bi" [class.bi-chevron-down]="expanded!==c.name" [class.bi-chevron-up]="expanded===c.name" style="font-size:12px; color:#9ca3af"></i>
+                </div>
+              </div>
+              @if (expanded === c.name) {
+                <div class="cat-expand">
+                  <div class="cat-ex-title">Example topics:</div>
+                  @for (ex of c.examples; track ex) {
+                    <div class="cat-ex-item">
+                      <span class="cat-ex-dot" [style.background]="c.color"></span>
+                      {{ ex }}
+                    </div>
+                  }
+                  <a routerLink="/search" [queryParams]="{category: c.name}" class="cat-ex-link">
+    Browse {{ c.name }} <i class="bi bi-arrow-right"></i>
+  </a>
+                </div>
+              }
+            </div>
+          </div>
+        }
+
+        @if (filtered.length === 0) {
+          <div class="col-12">
+            <div class="text-center py-5 text-muted">
+              <div style="font-size:40px">🔍</div>
+              <p class="mt-2">No categories match your filter.</p>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <!-- Most Explored Sidebar -->
+    <div class="col-lg-4">
+      <div class="most-explored">
+        <div class="me-header">
+          <div class="me-orb"></div>
+          <div class="position-relative">
+            <div class="me-eyebrow">🔥 Most Explored</div>
+            <h4 class="me-title">Trending Topics</h4>
+          </div>
+        </div>
+        <div class="me-list">
+          @for (t of mostExplored; track t.slug; let i=$index) {
+            <div class="me-row" (click)="go(t.slug)">
+              <span class="me-rank">{{ i + 1 }}</span>
+              <div class="flex-grow-1">
+                <div class="me-name">{{ t.name }}</div>
+                <div class="me-tag">{{ t.tag }}</div>
+              </div>
+              <span class="me-count">{{ t.count }} views</span>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,93 @@
+.ks-nav {
+   
+  
+   
+  height: 62px;
+  
+
+  background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid rgb(232, 234, 240);
+    backdrop-filter: blur(8px);
+     
+    box-shadow: rgba(79, 70, 229, 0.07) 0px 2px 12px;
+}
+
+.navbar-brand { flex-shrink: 0; border: 0;}
+
+.nav-logo {
+  width: 34px; height: 34px;
+  border-radius: 10px;
+    background: linear-gradient(135deg, rgb(79, 70, 229) 0%, rgb(124, 58, 237) 100%);
+    box-shadow: rgba(79, 70, 229, 0.3) 0px 4px 12px;
+  border-radius: 9px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 17px; flex-shrink: 0;
+  color: #fff;
+}
+
+.brand-name {
+  font-size: 20px;
+    font-weight: 700;
+    background: linear-gradient(135deg, rgb(79, 70, 229) 0%, rgb(124, 58, 237) 100%) text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.3px;
+}
+
+/* Search box */
+.nav-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f4f4f8;
+  border: 1.5px solid transparent;
+  border-radius: 10px;
+  padding: 8px 14px;
+  transition: all .2s;
+}
+
+.nav-search:focus-within {
+  background: #fff;
+  border-color: #5B5BD6;
+  box-shadow: 0 0 0 3px rgba(91,91,214,.1);
+}
+
+.nav-search i { color: #aaa; font-size: 13px; flex-shrink: 0; }
+
+.nav-search input {
+  border: none; background: transparent; outline: none;
+  font-size: 13.5px; color: #1a1a2e; width: 100%; min-width: 0;
+}
+
+.nav-search input::placeholder { color: #bbb; }
+
+.nav-clear {
+  cursor: pointer;
+  color: #bbb !important;
+  transition: color .15s;
+}
+.nav-clear:hover { color: #5B5BD6 !important; }
+
+/* Nav links */
+.ks-link {
+  display: block;
+  padding: 7px 14px !important;
+  font-size: 14px; font-weight: 500; color: #6b7280;
+  border-radius: 8px; text-decoration: none; transition: all .18s;
+}
+.ks-link:hover, .ks-link.active { color: #5B5BD6 !important; background: #ede9fe; }
+
+/* AI button */
+.btn-ai {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: linear-gradient(135deg,#5B5BD6,#7C3AED);
+  color: #fff !important; border-radius: 10px;
+  padding: 9px 20px; font-size: 13.5px; font-weight: 700;
+  text-decoration: none; transition: opacity .2s;
+}
+.btn-ai:hover { opacity: .88; }
+
+/* Mobile collapse search */
+@media (max-width: 767px) {
+  .ks-nav { height: auto; }
+  .nav-search.d-flex { padding: 8px 12px; }
+}

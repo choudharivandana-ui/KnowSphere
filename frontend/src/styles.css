@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import "bootstrap-icons/font/bootstrap-icons.css";
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: #f4f4f8;
+  color: #1a1a2e;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+:root {
+  --p: #5B5BD6;
+  --p2: #7C3AED;
+  --dark: #1a1a2e;
+  --bg: #f4f4f8;
+  --muted: #6b7280;
+  --border: #e5e5f0;
+  --card: #fff;
+}
+
+/* Utility */
+.text-gradient {
+  background: linear-gradient(90deg, #a5b4fc, #e879f9, #fb923c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f4f4f8; }
+::-webkit-scrollbar-thumb { background: #c4b5fd; border-radius: 3px; }
+
+/* Bootstrap overrides */
+.btn:focus { box-shadow: none; }
+a { color: var(--p); }
+
+/* Loading spinner override */
+.spinner-border { border-color: #5B5BD6; border-right-color: transparent; }
