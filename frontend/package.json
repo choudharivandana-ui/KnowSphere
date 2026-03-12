@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "npx serve -s dist/knowsphere/browser -p $PORT",
+    "start": "npx http-server dist/knowsphere/browser -p $PORT --proxy http://localhost:$PORT?",
     "build": "ng build",
     "build:prod": "ng build --configuration production"
   },
