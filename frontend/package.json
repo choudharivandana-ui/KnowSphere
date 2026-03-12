@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "npx serve -s dist/knowsphere/browser --listen tcp://0.0.0.0:$PORT",
+    "start": "npx serve -s dist/knowsphere/browser -p $PORT",
     "build": "ng build",
     "build:prod": "ng build --configuration production"
   },
