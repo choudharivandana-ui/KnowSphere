@@ -3,14 +3,13 @@ const path = require('path');
 const app = express();
 
 // Serve Angular production build
-app.use(express.static(path.join(__dirname, 'dist/knowsphere')));
+app.use(express.static(path.join(__dirname, 'dist/knowsphere/browser')));
 
-// Catch-all route for Angular (must be a regex in Express 5)
+// Catch-all route for Angular
 app.get(/.*/, (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/knowsphere/index.html'));
+  res.sendFile(path.join(__dirname, 'dist/knowsphere/browser/index.html'));
 });
 
-// Railway provides PORT automatically
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Frontend running on port ${PORT}`);
