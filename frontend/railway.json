@@ -4,6 +4,7 @@
     "buildCommand": "npm install && npm run build"
   },
   "deploy": {
-    "startCommand": "node server.js"
+    "startCommand": "npx serve -s dist/knowsphere/browser -l $PORT",
+    "healthcheckPath": "/"
   }
 }
