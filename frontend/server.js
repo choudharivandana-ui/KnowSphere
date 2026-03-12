@@ -2,14 +2,15 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+// Serve Angular production build
+app.use(express.static(path.join(__dirname, 'dist/knowsphere')));
 
-app.use(express.static(path.join(__dirname, 'dist/knowsphere/browser')));
-
-app.get('/*splat', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/knowsphere/browser/index.html'));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist/knowsphere/index.html'));
 });
 
+// Use Railway's PORT variable
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`Frontend running on port ${PORT}`);
 });
