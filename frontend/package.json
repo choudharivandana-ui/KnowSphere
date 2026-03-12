@@ -2,11 +2,11 @@
   "name": "knowsphere-frontend",
   "version": "1.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "node server.js",
-    "build": "ng build",
-    "build:prod": "ng build --configuration production"
-  },
+  "ng": "ng",
+  "start": "node server.js",
+  "build": "ng build --configuration production",
+  "build:prod": "ng build --configuration production"
+},
   "private": true,
   "dependencies": {
     "@angular/animations": "^18.0.0",
