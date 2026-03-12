@@ -9,7 +9,11 @@ const PORT = process.env.PORT || 3000;
 /* ── CORS ───────────────────────────────────────────────────────────────── */
 app.use(cors({
   origin: (origin, cb) => {
-    if (!origin || /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin)) {
+    const allowed = [
+      /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/,
+      /^https:\/\/.*\.up\.railway\.app$/
+    ];
+    if (!origin || allowed.some(r => r.test(origin))) {
       cb(null, true);
     } else {
       cb(new Error('CORS: origin not allowed'));
