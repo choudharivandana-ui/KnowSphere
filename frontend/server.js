@@ -9,7 +9,7 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist/knowsphere/index.html'));
 });
 
-// Use Railway's PORT variable
+// Railway provides PORT automatically
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Frontend running on port ${PORT}`);
