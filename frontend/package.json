@@ -7,6 +7,7 @@
   "build": "ng build --configuration production",
   "heroku-postbuild": "npm run build"
 },
+
   "private": true,
   "dependencies": {
     "@angular/animations": "^18.0.0",
