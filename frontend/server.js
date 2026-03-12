@@ -5,8 +5,8 @@ const app = express();
 // Serve Angular production build
 app.use(express.static(path.join(__dirname, 'dist/knowsphere')));
 
-// Catch-all route for Angular
-app.get('/*', (req, res) => {
+// Catch-all route for Angular (must be a regex in Express 5)
+app.get(/.*/, (req, res) => {
   res.sendFile(path.join(__dirname, 'dist/knowsphere/index.html'));
 });
 
