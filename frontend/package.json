@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "npx http-server dist/knowsphere/browser -p $PORT --proxy http://localhost:$PORT?",
+    "start": "node server.js",
     "build": "ng build",
     "build:prod": "ng build --configuration production"
   },
@@ -19,6 +19,7 @@
     "@angular/router": "^18.0.0",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.13.1",
+    "express": "^5.2.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
