@@ -29,16 +29,16 @@ export class HomeComponent implements OnInit {
   filteredSug: string[] = [];
   quickTags = ['Chennai', 'Google', 'Peking Duck', 'Kyoto', 'Nike', 'Ramen'];
 
-  typeBg    = ['#ede9fe','#e0f2fe','#dcfce7','#fef3c7','#f3e8ff','#fce7f3'];
-  typeColor = ['#5B5BD6','#0891b2','#16a34a','#d97706','#7C3AED','#db2777'];
+  typeBg    = ['#f0f0f4'];
+  typeColor = ['#6b7280'];
 
   categories = [
-  { icon:'bi-globe', name:'Cities & Countries', count:'2,400+', bg:'#ede9fe' },
-  { icon:'bi-building', name:'Companies & Brands', count:'1,800+', bg:'#dbeafe' },
-  { icon:'bi-tree', name:'Plants & Trees', count:'3,200+', bg:'#dcfce7' },
-  { icon:'bi-gem', name:'Jewellery & Gems', count:'900+', bg:'#fef3c7' },
-  { icon:'bi-cpu', name:'Scientific Terms', count:'5,100+', bg:'#f3e8ff' },
-  { icon:'bi-music-note-beamed', name:'Festivals & Culture', count:'1,200+', bg:'#fce7f3' }
+  { icon:'bi-globe', name:'Cities & Countries', count:'2,400+', bg:'#f0f0f4' },
+  { icon:'bi-building', name:'Companies & Brands', count:'1,800+', bg:'#f0f0f4' },
+  { icon:'bi-tree', name:'Plants & Trees', count:'3,200+', bg:'#f0f0f4' },
+  { icon:'bi-gem', name:'Jewellery & Gems', count:'900+', bg:'#f0f0f4' },
+  { icon:'bi-cpu', name:'Scientific Terms', count:'5,100+', bg:'#f0f0f4' },
+  { icon:'bi-music-note-beamed', name:'Festivals & Culture', count:'1,200+', bg:'#f0f0f4' }
 ];
 
   features = [

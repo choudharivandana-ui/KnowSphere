@@ -1,5 +1,6 @@
 .cat-header {
-  background:linear-gradient(160deg,#1a1060 0%,#3730a3 50%,#5B5BD6 100%);
+  /* background:linear-gradient(160deg,#1a1060 0%,#3730a3 50%,#5B5BD6 100%); */
+  background: #3730a3;
   padding:56px 0 44px; position:relative; overflow:hidden;
 }
 .cat-header-orb { position:absolute; border-radius:50%; filter:blur(60px); pointer-events:none; }
@@ -42,6 +43,9 @@
   text-decoration:none; transition:opacity .2s;
 }
 .cat-ex-link:hover { opacity:.88; }
+.cat-icon{
+  color:#5B5BD6 ;
+}
 
 /* Most Explored */
 .most-explored { background:linear-gradient(135deg,#1a1a2e,#2d2a6e 60%,#3b1f6e); border-radius:16px; overflow:hidden; box-shadow:0 16px 48px rgba(26,26,46,.25); position:sticky; top:72px; }

@@ -106,7 +106,7 @@
           @for (topic of (featuredTopics.length ? featuredTopics : fallbackTopics).slice(0,3); track topic.slug; let i=$index) {
             <div class="col-md-4">
               <div class="tcard h-100" (click)="go(topic.slug)">
-                <div class="d-flex align-items-start justify-content-between mb-3">
+                <div class="d-flex align-items-start justify-content-between mb-2">
                   <span class="type-badge" [style.background]="typeBg[i%typeBg.length]" [style.color]="typeColor[i%typeColor.length]">
                     {{ topic.topicData?.type || topic.category }}
                   </span>
@@ -146,9 +146,9 @@
         <div class="panel h-100">
           <div class="panel-title mb-3"><i class="bi bi-graph-up-arrow text-primary"></i> Trending Searches</div>
           @if (loadingTrending) {
-            @for (i of [1,2,3,4,5,6,7,8]; track i) { <div class="skel-line mb-2"></div> }
+            @for (i of [1,2,3,4,5,6]; track i) { <div class="skel-line mb-2"></div> }
           } @else {
-            @for (t of trendingTopics; track t.slug; let i=$index) {
+            @for (t of trendingTopics.slice(0,6); track t.slug; let i=$index) {
               <a class="trend-row text-decoration-none" [routerLink]="['/topic', t.slug]">
                 <span class="trend-rank">{{ i+1 }}</span>
                 <div class="flex-grow-1">

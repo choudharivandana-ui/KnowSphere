@@ -2,7 +2,8 @@
 .hero {
   position:relative; overflow:hidden; min-height:430px;
   display:flex; align-items:center;
-  background: linear-gradient(160deg,#1a1060 0%,#3730a3 40%,#5B5BD6 70%,#7c3aed 100%);
+  /* background: linear-gradient(160deg,#1a1060 0%,#3730a3 40%,#5B5BD6 70%,#7c3aed 100%); */
+  background: #3730a3;
   padding:20px 0;
 }
 .hero-grid {
@@ -25,8 +26,8 @@
 @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
 
 .hero-title {
-  font-size:clamp(28px,5.5vw,56px); font-weight:800; color:#fff;
-  line-height:1.15; letter-spacing:-1px; margin-bottom:14px;
+  font-size:clamp(28px,5.5vw,56px); font-weight:500; color:#fff;
+  line-height:1.15; letter-spacing:0; margin-bottom:14px;
 }
 .gradient-text {
   background:linear-gradient(90deg,#a5b4fc,#e879f9,#fb923c);
@@ -87,7 +88,7 @@
 .stat-lbl { font-size:13px; color:#6b7280; margin-top:3px; text-align:center; }
 
 /* ── HOME BODY ─────────────────────────────────── */
-.home-body { background:#f4f4f8; }
+.home-body { background:#fcfcff; }
 .eyebrow { display:flex; align-items:center; gap:5px; font-size:11px; font-weight:700; color:#5B5BD6; text-transform:uppercase; letter-spacing:.7px; margin-bottom:4px; }
 .sec-title { font-size:24px; font-weight:700; color:rgb(30, 27, 75); letter-spacing:-.4px; margin:0; }
 .view-all { color:#5B5BD6; font-size:13px; font-weight:600; text-decoration:none; display:flex; align-items:center; gap:4px; transition:gap .18s; }
@@ -127,9 +128,10 @@
 
 /* Dark panel */
 .dark-panel {
-  background:linear-gradient(135deg,#1a1a2e,#2d2a6e 50%,#3b1f6e);
+  /* background:linear-gradient(135deg,#1a1a2e,#2d2a6e 50%,#3b1f6e); */
+  background: #3730a3;
   border-radius:16px; padding:32px; color:#fff; position:relative; overflow:hidden;
-  box-shadow:0 16px 48px rgba(26,26,46,.28);
+  /* box-shadow:0 16px 48px rgba(26,26,46,.28); */
 }
 .dark-orb { position:absolute; top:-40px; right:-40px; width:180px; height:180px; border-radius:50%; background:rgba(124,58,237,.2); filter:blur(36px); }
 .dark-eyebrow { font-size:10px; font-weight:700; color:#a5b4fc; text-transform:uppercase; letter-spacing:.8px; }

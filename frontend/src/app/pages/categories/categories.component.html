@@ -29,8 +29,8 @@
           <div class="col-md-6">
             <div class="cat-card" [class.expanded]="expanded === c.name">
               <div class="cat-card-header" (click)="toggle(c.name)">
-                <div class="cat-icon" [style.background]="c.bg">
-  <i class="bi" [ngClass]="c.icon" [style.color]="c.color"></i>
+                <div class="cat-icon" >
+  <i class="bi" [ngClass]="c.icon"></i>
 </div>
                 <div class="flex-grow-1">
                   <div class="cat-card-name">{{ c.name }}</div>
